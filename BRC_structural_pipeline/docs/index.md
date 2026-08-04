@@ -1,7 +1,10 @@
-# BRC Neuroimaging Pipelines
+# BRAID Neuroimaging Pipelines
+
+!!! note "Derived Work"
+    These pipelines and this documentation are derived from the **BRC Neuroimaging Pipelines**, originally developed by Ali-Reza Mohammadi-Nejad and Stamatios N Sotiropoulos at the University of Nottingham. The BRAID project has adapted them for use within Trusted Research Environments (TREs) under federated analytics frameworks. Original copyright 2018–2024 University of Nottingham.
 
 !!! info "Target Audience"
-    Neuroimaging researchers, MRI data engineers, and TRE operators deploying BRC neuroimaging pipelines.
+    Neuroimaging researchers, MRI data engineers, and TRE operators deploying BRAID neuroimaging pipelines.
 
 This site documents the **BRC Neuroimaging Pipelines** — a suite of Bash shell pipelines for end-to-end preprocessing and analysis of multimodal brain MRI data, developed at the University of Nottingham.
 

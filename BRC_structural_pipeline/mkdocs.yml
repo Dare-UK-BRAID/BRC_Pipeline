@@ -1,5 +1,5 @@
-site_name: BRC Neuroimaging Pipelines
-site_description: Technical documentation for the BRC neuroimaging preprocessing pipelines (structural, diffusion, functional, perfusion, group analysis, IDP extraction)
+site_name: BRAID Neuroimaging Pipelines
+site_description: Technical documentation for the BRAID neuroimaging preprocessing pipelines (structural, diffusion, functional, perfusion, group analysis, IDP extraction)
 site_author: Ali-Reza Mohammadi-Nejad & Stamatios N Sotiropoulos
 site_url: https://github.com/BRC_Pipeline
 repo_url: https://github.com/BRC_Pipeline
@@ -8,18 +8,20 @@ docs_dir: docs
 
 theme:
   name: material
+  logo: assets/BRAID_logo.svg
+  favicon: assets/BRAID_logo.svg
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: blue
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
-      accent: blue
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
@@ -27,7 +29,6 @@ theme:
     text: Inter
     code: JetBrains Mono
   features:
-    - navigation.tabs
     - navigation.sections
     - navigation.indexes
     - navigation.top
@@ -37,6 +38,9 @@ theme:
     - search.highlight
     - content.code.copy
     - content.tooltips
+
+extra_css:
+  - stylesheets/braid.css
 
 plugins:
   - search

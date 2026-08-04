@@ -1,0 +1,64 @@
+/* ── BRAID colour scheme ─────────────────────────────────────────────── */
+
+:root {
+  --md-primary-fg-color:        #282832;
+  --md-primary-fg-color--light: #3a3a4a;
+  --md-primary-fg-color--dark:  #1a1a22;
+  --md-accent-fg-color:         #00dcff;
+  --md-accent-fg-color--transparent: rgba(0, 220, 255, 0.1);
+}
+
+/* Header bar */
+.md-header {
+  background-color: #282832;
+}
+
+/* Sidebar nav active link highlight */
+.md-nav__link--active,
+.md-nav__link:focus,
+.md-nav__link:hover {
+  color: #00dcff !important;
+}
+
+/* Active section title in sidebar */
+.md-nav__title {
+  color: #282832;
+}
+
+/* Accent buttons, links */
+a {
+  color: #00dcff;
+}
+a:hover {
+  color: #ff7a94;
+}
+
+/* Code block copy button accent */
+.md-clipboard:hover {
+  color: #00dcff;
+}
+
+/* Search highlight */
+.md-search-result mark {
+  color: #ff7a94;
+  background-color: transparent;
+}
+
+/* Table header */
+.md-typeset table:not([class]) th {
+  background-color: #282832;
+  color: #ffffff;
+}
+
+/* Admonition accent border */
+.md-typeset .admonition,
+.md-typeset details {
+  border-left-color: #00dcff;
+}
+
+/* ── Logo sizing ─────────────────────────────────────────────────────── */
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 2rem;
+  width: auto;
+}
