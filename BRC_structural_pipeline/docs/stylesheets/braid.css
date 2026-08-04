@@ -1,46 +1,52 @@
-/* ── BRAID colour scheme ─────────────────────────────────────────────── */
+/* ================================================================
+   BRAID theme — light blue accent, no cyan
+   Primary dark:  #282832
+   Accent blue:   #4a9eda
+   Accent pink:   #ff7a94  (warnings only)
+   ================================================================ */
 
-/* Header bar */
+/* ── Header ──────────────────────────────────────────────────────────── */
 .md-header {
   background-color: #282832 !important;
 }
 
-/* ── Navigation — ALL states black text ──────────────────────────────── */
+/* ── Accent variable override ────────────────────────────────────────── */
+:root {
+  --braid-blue:   #4a9eda;
+  --braid-blue-light: #d0e8f7;
+  --braid-blue-mid:   #1565c0;
+  --braid-pink:   #ff7a94;
+  --braid-dark:   #282832;
+  --md-accent-fg-color: #4a9eda;
+  --md-accent-fg-color--transparent: rgba(74, 158, 218, 0.1);
+}
+
+/* ── Navigation — black text, blue active accent ─────────────────────── */
 .md-nav__link,
 .md-nav__link:focus,
 .md-nav__link:hover,
 .md-nav__link--active,
 .md-nav__item--active > .md-nav__link,
-.md-nav__item .md-nav__link--active,
 .md-nav__title {
   color: #282832 !important;
 }
 
-/* Active item: cyan left border only, text stays black */
 .md-nav__link--active,
 .md-nav__item--active > .md-nav__link {
-  border-left: 3px solid #00dcff;
+  border-left: 3px solid #4a9eda;
   padding-left: 0.4rem;
   font-weight: 700;
-  color: #282832 !important;
 }
 
 .md-nav__link:hover {
   font-weight: 600;
-  color: #282832 !important;
 }
 
-/* Override Material accent variable */
-:root {
-  --md-accent-fg-color: #282832;
-  --md-accent-fg-color--transparent: rgba(40, 40, 50, 0.1);
-}
-
-/* ── Body links — black with cyan underline ──────────────────────────── */
+/* ── Body links — black text, blue underline ─────────────────────────── */
 .md-typeset a {
   color: #282832 !important;
   text-decoration: underline;
-  text-decoration-color: #00dcff;
+  text-decoration-color: #4a9eda;
   text-underline-offset: 2px;
 }
 
@@ -49,64 +55,73 @@
   text-decoration-color: #ff7a94;
 }
 
-/* ── Tables — blue header ────────────────────────────────────────────── */
+/* ── Tables — blue shades ────────────────────────────────────────────── */
+.md-typeset table:not([class]) {
+  border: 1px solid #90c4e8;
+  border-radius: 4px;
+  overflow: hidden;
+  display: table;
+  width: 100%;
+}
+
 .md-typeset table:not([class]) th {
   background-color: #1565c0;
   color: #ffffff;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.md-typeset table:not([class]) tr:nth-child(odd) {
+  background-color: #ffffff;
 }
 
 .md-typeset table:not([class]) tr:nth-child(even) {
-  background-color: #e8f0fe;
-}
-
-.md-typeset table:not([class]) {
-  border: 1px solid #90caf9;
+  background-color: #e3f2fd;
 }
 
 .md-typeset table:not([class]) td {
-  border-color: #90caf9;
+  border-color: #90c4e8;
+}
+
+/* First column: prevent variable names from wrapping */
+.md-typeset table:not([class]) td:first-child,
+.md-typeset table:not([class]) th:first-child {
+  white-space: nowrap;
+}
+
+/* Allow table to scroll horizontally on small screens */
+.md-typeset__scrollwrap {
+  overflow-x: auto;
 }
 
 /* ── Admonitions ─────────────────────────────────────────────────────── */
-
-/* Default admonition — cyan scheme */
 .md-typeset .admonition,
 .md-typeset details {
-  border-left-color: #00dcff;
+  border-left-color: #4a9eda;
 }
 
-/* Note box — cyan icon and title bar */
-.md-typeset .admonition.note,
-.md-typeset details.note {
-  border-left-color: #00dcff;
-}
-
+/* Note / Info — light blue */
 .md-typeset .note > .admonition-title,
-.md-typeset .note > summary {
-  background-color: rgba(0, 220, 255, 0.15) !important;
+.md-typeset .note > summary,
+.md-typeset .info > .admonition-title,
+.md-typeset .info > summary {
+  background-color: rgba(74, 158, 218, 0.15) !important;
 }
 
 .md-typeset .note > .admonition-title::before,
-.md-typeset .note > summary::before {
-  background-color: #00dcff !important;
+.md-typeset .note > summary::before,
+.md-typeset .info > .admonition-title::before,
+.md-typeset .info > summary::before {
+  background-color: #4a9eda !important;
   -webkit-mask-image: var(--md-admonition-icon--note);
   mask-image: var(--md-admonition-icon--note);
 }
 
-/* Info box — also cyan */
+.md-typeset .admonition.note,
+.md-typeset details.note,
 .md-typeset .admonition.info,
 .md-typeset details.info {
-  border-left-color: #00dcff;
-}
-
-.md-typeset .info > .admonition-title,
-.md-typeset .info > summary {
-  background-color: rgba(0, 220, 255, 0.15) !important;
-}
-
-.md-typeset .info > .admonition-title::before,
-.md-typeset .info > summary::before {
-  background-color: #00dcff !important;
+  border-left-color: #4a9eda;
 }
 
 /* Warning — BRAID pink */
@@ -125,16 +140,21 @@
   background-color: #ff7a94 !important;
 }
 
-/* ── Search ──────────────────────────────────────────────────────────── */
+/* ── Search highlight ────────────────────────────────────────────────── */
 .md-search-result mark {
   color: #282832;
-  background-color: rgba(0, 220, 255, 0.25);
+  background-color: rgba(74, 158, 218, 0.3);
   border-radius: 2px;
 }
 
-/* ── Permalink ───────────────────────────────────────────────────────── */
+/* ── Permalink anchor ────────────────────────────────────────────────── */
 .md-typeset .headerlink {
-  color: #00dcff !important;
+  color: #4a9eda !important;
+}
+
+/* ── Code copy button ────────────────────────────────────────────────── */
+.md-clipboard:hover {
+  color: #4a9eda;
 }
 
 /* ── Logo ────────────────────────────────────────────────────────────── */
@@ -159,7 +179,7 @@
 
 [data-md-color-scheme="slate"] .md-typeset a {
   color: #e8e8e8 !important;
-  text-decoration-color: #00dcff;
+  text-decoration-color: #4a9eda;
 }
 
 [data-md-color-scheme="slate"] .md-typeset a:hover {
@@ -169,4 +189,8 @@
 
 [data-md-color-scheme="slate"] .md-typeset table:not([class]) tr:nth-child(even) {
   background-color: #1a2744;
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) tr:nth-child(odd) {
+  background-color: #1e2a3a;
 }
