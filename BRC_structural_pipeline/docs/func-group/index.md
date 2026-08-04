@@ -4,7 +4,9 @@ The **BRC Functional Group Analysis Pipeline** (`BRC_func_group_analysis`) perfo
 
 ---
 
-## Overview
+!!! note "Prerequisites"
+    This pipeline requires completed [Functional Pipeline](../functional/index.md) runs for all subjects, which in turn requires a completed [Structural Pipeline](../pipeline/overview.md) run.
+
 
 The pipeline takes individually preprocessed and registered fMRI data (output of the `BRC_functional_pipeline`) and performs:
 

@@ -4,7 +4,6 @@ The **BRC Perfusion Pipeline** (`BRC_perfusion_pipeline`) processes single-TI ps
 
 ---
 
-## Overview
 
 The pipeline takes a difference (perfusion-weighted) image and a calibration (M0) image as inputs. It performs CBF quantification using a standard kinetic model, registers the ASL data to the subject's T1 anatomical image (using boundary-based registration leveraging the white matter segmentation), propagates the result to MNI152 standard space, organises outputs, and optionally applies multi-tissue-linear-series (MLTS) partial volume correction.
 
@@ -30,7 +29,7 @@ ASL_preproc.sh \
 ```
 
 !!! note "Structural prerequisite"
-    The perfusion pipeline requires a completed structural pipeline run for the same subject. It uses the T1 brain, white matter mask, and T1→MNI registration produced by `BRC_structural_pipeline`.
+    The perfusion pipeline requires a completed [Structural Pipeline](../pipeline/overview.md) run for the same subject. It uses the T1 brain, white matter mask, and T1→MNI registration produced by `BRC_structural_pipeline`.
 
 ---
 

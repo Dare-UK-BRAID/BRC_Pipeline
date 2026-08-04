@@ -4,7 +4,9 @@ The **BRC Functional MRI Pipeline** (`BRC_functional_pipeline`) preprocesses res
 
 ---
 
-## Overview
+!!! note "Structural prerequisite"
+    EPI-to-T1 registration and standard-space warping require a completed [Structural Pipeline](../pipeline/overview.md) run for the same subject.
+
 
 The pipeline supports multiple susceptibility distortion correction strategies (TOPUP spin-echo, Siemens/GE field maps, or none), flexible slice-timing correction via FSL or SPM, and modular physiological noise removal. The default output is a cleaned, registered 4D fMRI volume in standard space, ready for group-level analysis.
 

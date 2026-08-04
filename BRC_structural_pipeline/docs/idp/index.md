@@ -4,11 +4,10 @@ The **BRC IDP Extraction Pipeline** (`BRC_IDP_extraction`) extracts a standardis
 
 ---
 
-## Overview
 
 IDPs are summary scalar measurements derived from neuroimaging data — for example, subcortical structure volumes, tissue fractions, white matter skeleton metrics, and cortical thickness estimates from FreeSurfer. The pipeline iterates over a list of subjects, computes IDPs for each, and assembles a group-level matrix.
 
-This pipeline requires completed runs of `BRC_structural_pipeline` (and optionally `BRC_diffusion_pipeline`) for each subject in the cohort.
+This pipeline requires completed runs of the [Structural Pipeline](../pipeline/overview.md) (and optionally the [Diffusion Pipeline](../diffusion/index.md)) for each subject in the cohort.
 
 ---
 

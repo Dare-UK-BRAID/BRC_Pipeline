@@ -4,7 +4,9 @@ The **BRC Diffusion MRI Pipeline** (`BRC_diffusion_pipeline`) processes single- 
 
 ---
 
-## Overview
+!!! note "Structural prerequisite"
+    Registration steps require a completed [Structural Pipeline](../pipeline/overview.md) run to provide the T1 brain and T1→MNI transforms.
+
 
 The pipeline is designed for data acquired with opposing phase-encode directions (LR/RL or AP/PA), enabling field-map-free susceptibility distortion correction via FSL TOPUP. It supports standard Stejskal-Tanner DTI, as well as advanced multi-shell models including NODDI, DKI/WMTI, and the ALPS diffusion perivascular space metric.
 
