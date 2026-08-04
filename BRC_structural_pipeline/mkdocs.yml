@@ -64,8 +64,9 @@ markdown_extensions:
 nav:
   - Home: index.md
 
-  - Structural Pipeline:
-    - Overview: pipeline/overview.md
+  - Structural Pipeline: pipeline/overview.md
+
+  - Structural Reference:
     - Directory Structure: pipeline/directory-structure.md
     - Dependencies: pipeline/dependencies.md
     - Script Reference:
