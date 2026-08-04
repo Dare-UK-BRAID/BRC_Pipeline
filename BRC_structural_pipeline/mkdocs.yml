@@ -1,15 +1,15 @@
 site_name: BRAID Neuroimaging Pipelines
 site_description: Technical documentation for the BRAID neuroimaging preprocessing pipelines (structural, diffusion, functional, perfusion, group analysis, IDP extraction)
 site_author: Ali-Reza Mohammadi-Nejad & Stamatios N Sotiropoulos
-site_url: https://github.com/BRC_Pipeline
-repo_url: https://github.com/BRC_Pipeline
-repo_name: BRC_Pipeline
+site_url: https://dare-uk-braid.github.io/BRC_Pipeline/
+repo_url: https://github.com/Dare-UK-BRAID/BRC_Pipeline
+repo_name: Dare-UK-BRAID/BRC_Pipeline
 docs_dir: docs
 
 theme:
   name: material
-  logo: assets/BRAID_logo.svg
-  favicon: assets/BRAID_logo.svg
+  logo: assets/BRAID_logo_light.svg
+  favicon: assets/BRAID_logo_light.svg
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default

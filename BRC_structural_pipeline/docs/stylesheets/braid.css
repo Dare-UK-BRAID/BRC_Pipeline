@@ -1,73 +1,119 @@
-/* ── BRAID colour overrides ──────────────────────────────────────────── */
+/* ── BRAID colour scheme ─────────────────────────────────────────────── */
 
-/* Header */
+/* Header bar */
 .md-header {
   background-color: #282832 !important;
 }
 
-/* Primary colour (nav highlight, links) */
-[data-md-color-primary="black"] {
-  --md-primary-fg-color:        #282832;
-  --md-primary-fg-color--light: #3a3a4a;
-  --md-primary-fg-color--dark:  #1a1a22;
+/* ── Navigation — ALL states black text ──────────────────────────────── */
+.md-nav__link,
+.md-nav__link:focus,
+.md-nav__link:hover,
+.md-nav__link--active,
+.md-nav__item--active > .md-nav__link,
+.md-nav__item .md-nav__link--active,
+.md-nav__title {
+  color: #282832 !important;
 }
 
-/* Accent colour */
-[data-md-color-accent="cyan"] {
-  --md-accent-fg-color:              #00dcff;
-  --md-accent-fg-color--transparent: rgba(0, 220, 255, 0.1);
+/* Active item: left border accent only, no colour change */
+.md-nav__link--active,
+.md-nav__item--active > .md-nav__link {
+  border-left: 3px solid #00dcff;
+  padding-left: 0.4rem;
+  font-weight: 700;
+  color: #282832 !important;
 }
 
-/* Active nav link */
-.md-nav__link--active {
-  color: #00dcff !important;
-}
-
+/* Hover: bold only, no colour change */
 .md-nav__link:hover {
-  color: #00dcff !important;
+  font-weight: 600;
+  color: #282832 !important;
 }
 
-/* Hyperlinks */
+/* ── Body text links — black with cyan underline ─────────────────────── */
 .md-typeset a {
-  color: #00dcff;
+  color: #282832 !important;
+  text-decoration: underline;
+  text-decoration-color: #00dcff;
+  text-underline-offset: 2px;
 }
 
 .md-typeset a:hover {
-  color: #ff7a94;
+  color: #282832 !important;
+  text-decoration-color: #ff7a94;
 }
 
-/* Table header row */
+/* Override Material accent colour variable used for links/active states */
+:root {
+  --md-accent-fg-color: #282832;
+  --md-accent-fg-color--transparent: rgba(40, 40, 50, 0.1);
+}
+
+/* ── Tables ──────────────────────────────────────────────────────────── */
 .md-typeset table:not([class]) th {
   background-color: #282832;
   color: #ffffff;
 }
 
-/* Admonition border accent */
+.md-typeset table:not([class]) tr:nth-child(even) {
+  background-color: #f0f4f8;
+}
+
+/* ── Admonitions ─────────────────────────────────────────────────────── */
 .md-typeset .admonition,
 .md-typeset details {
   border-left-color: #00dcff;
 }
 
-.md-typeset .admonition.note,
-.md-typeset details.note {
+.md-typeset .admonition.note > .admonition-title,
+.md-typeset details.note > summary {
+  background-color: rgba(0, 220, 255, 0.1);
+}
+
+.md-typeset .admonition.warning,
+.md-typeset details.warning {
   border-left-color: #ff7a94;
 }
 
-/* Search highlight */
+/* ── Search ──────────────────────────────────────────────────────────── */
 .md-search-result mark {
-  color: #ff7a94;
-  background-color: transparent;
-  font-weight: bold;
+  color: #282832;
+  background-color: rgba(0, 220, 255, 0.25);
+  border-radius: 2px;
 }
 
-/* ── Logo: allow wide BRAID logo to display fully ────────────────────── */
+/* ── Permalink ───────────────────────────────────────────────────────── */
+.md-typeset .headerlink {
+  color: #00dcff !important;
+}
+
+/* ── Logo ────────────────────────────────────────────────────────────── */
 .md-header__button.md-logo {
-  padding: 0.2rem 0.4rem;
+  padding: 0.2rem 0.6rem;
 }
 
 .md-header__button.md-logo img,
 .md-header__button.md-logo svg {
   height: 2rem;
   width: auto;
-  max-width: 160px;
+  max-width: 180px;
+}
+
+/* ── Dark mode ───────────────────────────────────────────────────────── */
+[data-md-color-scheme="slate"] .md-nav__link,
+[data-md-color-scheme="slate"] .md-nav__link:hover,
+[data-md-color-scheme="slate"] .md-nav__link--active,
+[data-md-color-scheme="slate"] .md-nav__item--active > .md-nav__link {
+  color: #e8e8e8 !important;
+}
+
+[data-md-color-scheme="slate"] .md-typeset a {
+  color: #e8e8e8 !important;
+  text-decoration-color: #00dcff;
+}
+
+[data-md-color-scheme="slate"] .md-typeset a:hover {
+  color: #ffffff !important;
+  text-decoration-color: #ff7a94;
 }
