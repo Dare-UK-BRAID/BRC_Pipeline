@@ -4,14 +4,15 @@ on:
   push:
     branches:
       - main
-      - master
     paths:
-      - 'BRC_structural_pipeline/docs/**'
-      - 'BRC_structural_pipeline/mkdocs.yml'
+      - 'docs/**'
+      - 'mkdocs.yml'
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   deploy:
@@ -28,5 +29,4 @@ jobs:
         run: pip install mkdocs-material
 
       - name: Build and deploy docs
-        working-directory: BRC_structural_pipeline
         run: mkdocs gh-deploy --force

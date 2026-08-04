@@ -1,0 +1,2559 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Technical documentation for the BRC neuroimaging preprocessing pipelines (structural, diffusion, functional, perfusion, group analysis, IDP extraction)">
+      
+      
+        <meta name="author" content="Ali-Reza Mohammadi-Nejad & Stamatios N Sotiropoulos">
+      
+      
+        <link rel="canonical" href="https://github.com/BRC_Pipeline/scripts/fsl-anat/">
+      
+      
+        <link rel="prev" href="../output-organization/">
+      
+      
+        <link rel="next" href="../run-preprocessing/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>FSL_anat.sh — FSL Anatomical Preprocessing - BRC Neuroimaging Pipelines</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fsl_anatsh-fsl-anatomical-preprocessing" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="BRC Neuroimaging Pipelines" class="md-header__button md-logo" aria-label="BRC Neuroimaging Pipelines" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            BRC Neuroimaging Pipelines
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              FSL_anat.sh — FSL Anatomical Preprocessing
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/BRC_Pipeline" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    BRC_Pipeline
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../pipeline/overview/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Structural Pipeline
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../diffusion/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Diffusion Pipeline
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../functional/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Functional Pipeline
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../func-group/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Functional Group Analysis
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../perfusion/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Perfusion (ASL) Pipeline
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../idp/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  IDP Extraction
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="BRC Neuroimaging Pipelines" class="md-nav__button md-logo" aria-label="BRC Neuroimaging Pipelines" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    BRC Neuroimaging Pipelines
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/BRC_Pipeline" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    BRC_Pipeline
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Structural Pipeline
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Structural Pipeline
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipeline/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipeline/directory-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Directory Structure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipeline/dependencies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dependencies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Script Reference
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Script Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_2" id="__nav_2_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entry Point
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Entry Point
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../struc-preproc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    struc_preproc.sh — Pipeline Entry Point
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../struc-preproc-part1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    struc_preproc_part_1.sh — Stage 1 Dispatcher
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../struc-preproc-part2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    struc_preproc_part_2.sh — FreeSurfer Reconstruction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../struc-preproc-part3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    struc_preproc_part_3.sh — FastSurfer + Output Organisation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_3" id="__nav_2_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core Processing
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Core Processing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../t1-preprocessing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    run_T1_preprocessing.sh — Core T1 Preprocessing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../t2-preprocessing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    run_T2_preprocessing.sh — Core T2 Preprocessing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_4" id="__nav_2_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analysis Tools
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Analysis Tools
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../t1-sienax/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    run_T1_sienax.sh — Brain Volume Estimation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../t2-bianca/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    run_T2_bianca.sh — White Matter Lesion Detection
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_5" id="__nav_2_4_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organisation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Organisation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../output-organization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    output_organization.sh — Final Output Organisation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FSL_anat.sh — FSL Anatomical Preprocessing
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FSL_anat.sh — FSL Anatomical Preprocessing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arguments
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pipeline-stages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pipeline Stages
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pipeline Stages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#averaging-multiple-scans-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Averaging Multiple Scans (optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#negative-range-fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Negative Range Fix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reorientation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reorientation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-cropping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auto-Cropping
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lesion-masking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lesion Masking
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bias-field-correction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bias Field Correction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registration-and-brain-extraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registration and Brain Extraction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tissue-type-segmentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tissue-Type Segmentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skull-constrained-volume-estimation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skull-Constrained Volume Estimation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subcortical-segmentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subcortical Segmentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#internal-helper-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Internal Helper Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../run-preprocessing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    run_preprocessing.sh — FreeSurfer-Based Intensity Normalisation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../move-rename/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    move_rename.sh — Legacy Output Reorganisation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Appendix
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/call-graph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline Call Graph
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/environment-variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Environment Variables Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/output-files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Key Output Files Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../diffusion/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diffusion Pipeline
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Diffusion Pipeline
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../functional/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Functional Pipeline
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Functional Pipeline
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../func-group/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Functional Group Analysis
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Functional Group Analysis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../perfusion/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Perfusion (ASL) Pipeline
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Perfusion (ASL) Pipeline
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../idp/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IDP Extraction
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    IDP Extraction
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arguments
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pipeline-stages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pipeline Stages
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pipeline Stages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#averaging-multiple-scans-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Averaging Multiple Scans (optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#negative-range-fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Negative Range Fix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reorientation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reorientation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-cropping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auto-Cropping
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lesion-masking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lesion Masking
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bias-field-correction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bias Field Correction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registration-and-brain-extraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registration and Brain Extraction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tissue-type-segmentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tissue-Type Segmentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skull-constrained-volume-estimation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skull-Constrained Volume Estimation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subcortical-segmentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subcortical Segmentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#internal-helper-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Internal Helper Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="fsl_anatsh-fsl-anatomical-preprocessing">FSL_anat.sh — FSL Anatomical Preprocessing<a class="headerlink" href="#fsl_anatsh-fsl-anatomical-preprocessing" title="Permanent link">&para;</a></h1>
+<p><strong>Location:</strong> <code>BRC_structural_pipeline/scripts/FSL_anat.sh</code><br />
+<strong>Authors:</strong> Ali-Reza Mohammadi-Nejad, Stamatios N Sotiropoulos<br />
+<strong>Last updated:</strong> 02 Oct 2018</p>
+<hr />
+<h2 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h2>
+<p>A comprehensive standalone FSL anatomical preprocessing script closely modelled on FSL's <code>fsl_anat</code> tool, customised for the BRC pipeline. It accepts a single or list of structural MRI images (T1, T2, or PD) and performs the full FSL anat pipeline ending in an <code>&lt;output&gt;/temp.anat/</code> directory, whose outputs are subsequently organised by <code>move_rename.sh</code>.</p>
+<hr />
+<h2 id="arguments">Arguments<a class="headerlink" href="#arguments" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-i &lt;image&gt;</code></td>
+<td>—</td>
+<td>Input structural image</td>
+</tr>
+<tr>
+<td><code>-o &lt;name&gt;</code></td>
+<td>—</td>
+<td>Output name stem; creates <code>&lt;name&gt;/temp.anat/</code></td>
+</tr>
+<tr>
+<td><code>-d &lt;dir&gt;</code></td>
+<td>—</td>
+<td>Use an existing <code>.anat</code> directory</td>
+</tr>
+<tr>
+<td><code>-s &lt;smooth&gt;</code></td>
+<td><code>20</code></td>
+<td>Bias field smoothness in mm</td>
+</tr>
+<tr>
+<td><code>-m &lt;mask&gt;</code></td>
+<td>—</td>
+<td>Lesion mask (inverted for bias field and registration)</td>
+</tr>
+<tr>
+<td><code>-t &lt;T1\|T2\|PD&gt;</code></td>
+<td><code>T1</code></td>
+<td>Image type for FSL FAST tissue model</td>
+</tr>
+<tr>
+<td><code>--list &lt;csv\|file&gt;</code></td>
+<td>—</td>
+<td>Comma-separated list or file of images to average</td>
+</tr>
+<tr>
+<td><code>--clobber</code></td>
+<td>off</td>
+<td>Overwrite existing <code>.anat</code> output directory</td>
+</tr>
+<tr>
+<td><code>--noreorient</code></td>
+<td>off</td>
+<td>Skip reorientation</td>
+</tr>
+<tr>
+<td><code>--nocrop</code></td>
+<td>off</td>
+<td>Skip auto-cropping</td>
+</tr>
+<tr>
+<td><code>--nobet</code></td>
+<td>off</td>
+<td>Skip brain extraction</td>
+</tr>
+<tr>
+<td><code>--noreg</code></td>
+<td>off</td>
+<td>Skip registration to standard space</td>
+</tr>
+<tr>
+<td><code>--nononlinreg</code></td>
+<td>off</td>
+<td>Skip non-linear registration</td>
+</tr>
+<tr>
+<td><code>--noseg</code></td>
+<td>off</td>
+<td>Skip tissue segmentation</td>
+</tr>
+<tr>
+<td><code>--nosubcortseg</code></td>
+<td>off</td>
+<td>Skip subcortical segmentation</td>
+</tr>
+<tr>
+<td><code>--nobias</code></td>
+<td>off</td>
+<td>Skip bias field correction</td>
+</tr>
+<tr>
+<td><code>--strongbias</code></td>
+<td>off</td>
+<td>Use strong bias correction (niter=5, smooth=10)</td>
+</tr>
+<tr>
+<td><code>--weakbias</code></td>
+<td>off</td>
+<td>Use weak bias correction <em>(default: niter=10, smooth=20)</em></td>
+</tr>
+<tr>
+<td><code>--betfparam &lt;f&gt;</code></td>
+<td><code>0.1</code></td>
+<td>BET fractional intensity threshold</td>
+</tr>
+<tr>
+<td><code>--nocleanup</code></td>
+<td>off</td>
+<td>Retain all intermediate files</td>
+</tr>
+<tr>
+<td><code>--anatbasedFS</code></td>
+<td>off</td>
+<td>Use FreeSurfer brain mask in place of FNIRT-derived mask</td>
+</tr>
+<tr>
+<td><code>-logfile &lt;path&gt;</code></td>
+<td>—</td>
+<td>Log file path</td>
+</tr>
+<tr>
+<td><code>-mridir &lt;path&gt;</code></td>
+<td>—</td>
+<td>FreeSurfer <code>mri/</code> directory <em>(required with <code>--anatbasedFS</code>)</em></td>
+</tr>
+<tr>
+<td><code>-orig &lt;image&gt;</code></td>
+<td>—</td>
+<td>Original (pre-crop) T1 for FOV extraction reference</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="pipeline-stages">Pipeline Stages<a class="headerlink" href="#pipeline-stages" title="Permanent link">&para;</a></h2>
+<h3 id="averaging-multiple-scans-optional">Averaging Multiple Scans <em>(optional)</em><a class="headerlink" href="#averaging-multiple-scans-optional" title="Permanent link">&para;</a></h3>
+<p>If <code>--list</code> is provided, images are averaged using <code>AnatomicalAverage</code>.</p>
+<h3 id="negative-range-fix">Negative Range Fix<a class="headerlink" href="#negative-range-fix" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>fslstats<span class="w"> </span>T1<span class="w"> </span>-p<span class="w"> </span><span class="m">0</span><span class="w">   </span><span class="c1"># min value</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>fslstats<span class="w"> </span>T1<span class="w"> </span>-p<span class="w"> </span><span class="m">100</span><span class="w"> </span><span class="c1"># max value</span>
+</code></pre></div>
+<p>If negative values are present among positive ones, the minimum is subtracted. If all values are negative, they are made positive while preserving zeros.</p>
+<h3 id="reorientation">Reorientation<a class="headerlink" href="#reorientation" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>fslreorient2std<span class="w"> </span>T1<span class="w"> </span>&gt;<span class="w"> </span>T1_orig2std.mat
+</code></pre></div>
+<p>Forward and inverse reorientation matrices are saved for downstream transforms.</p>
+<h3 id="auto-cropping">Auto-Cropping<a class="headerlink" href="#auto-cropping" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>robustfov<span class="w"> </span>-i<span class="w"> </span>T1_fullfov<span class="w"> </span>-r<span class="w"> </span>T1<span class="w"> </span>-m<span class="w"> </span>T1_roi2nonroi.mat
+</code></pre></div>
+<p>Crops the FOV and records the crop-to-full-FOV transform.</p>
+<h3 id="lesion-masking">Lesion Masking<a class="headerlink" href="#lesion-masking" title="Permanent link">&para;</a></h3>
+<p>If a lesion mask is provided, it is reoriented and cropped to match the processed T1. A binary inverse mask (<code>lesionmaskinv</code>) is used to exclude lesion voxels from bias estimation and registration.</p>
+<h3 id="bias-field-correction">Bias Field Correction<a class="headerlink" href="#bias-field-correction" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Weak bias (default)</label><label for="__tabbed_1_2">Strong bias (--strongbias)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>A single BET pass gets a rough brain mask, followed by two rounds of FSL FAST bias estimation:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>bet<span class="w"> </span>T1<span class="w"> </span>T1_initfast2_brain<span class="w"> </span>-m<span class="w"> </span>-f<span class="w"> </span><span class="m">0</span>.1
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>fast<span class="w"> </span>-o<span class="w"> </span>T1_fast<span class="w"> </span>-l<span class="w"> </span><span class="m">20</span><span class="w"> </span>-b<span class="w"> </span>-B<span class="w"> </span>-t<span class="w"> </span><span class="m">1</span><span class="w"> </span>--iter<span class="o">=</span><span class="m">10</span><span class="w"> </span>--nopve<span class="w"> </span>--fixed<span class="o">=</span><span class="m">0</span><span class="w"> </span>T1_initfast2_maskedrestore
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>An extra large-scale correction step using <code>quick_smooth</code> precedes the FAST-based correction:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Stage 1: large-scale (subsampling-based smoothing)</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>fslmaths<span class="w"> </span>T1<span class="w"> </span>-div<span class="w"> </span>T1_s20<span class="w"> </span>T1_hpf
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="c1"># Stage 2: detailed FAST-based correction</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>fast<span class="w"> </span>-o<span class="w"> </span>T1_initfast<span class="w"> </span>-l<span class="w"> </span><span class="m">10</span><span class="w"> </span>-b<span class="w"> </span>-B<span class="w"> </span>-t<span class="w"> </span><span class="m">1</span><span class="w"> </span>--iter<span class="o">=</span><span class="m">5</span><span class="w"> </span>--nopve<span class="w"> </span>--fixed<span class="o">=</span><span class="m">0</span><span class="w"> </span>T1_hpf2_maskedbrain
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="registration-and-brain-extraction">Registration and Brain Extraction<a class="headerlink" href="#registration-and-brain-extraction" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>flirt<span class="w"> </span>-interp<span class="w"> </span>spline<span class="w"> </span>-dof<span class="w"> </span><span class="m">12</span><span class="w"> </span>-in<span class="w"> </span>T1_biascorr<span class="w"> </span>-ref<span class="w"> </span>MNI152_T1_2mm<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">      </span>-omat<span class="w"> </span>T1_to_MNI_lin.mat
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>fnirt<span class="w"> </span>--in<span class="o">=</span>T1_biascorr<span class="w"> </span>--ref<span class="o">=</span>MNI152_T1_2mm<span class="w"> </span>--fout<span class="o">=</span>T1_to_MNI_nonlin_field<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">      </span>--cout<span class="o">=</span>T1_to_MNI_nonlin_coeff<span class="w"> </span>--aff<span class="o">=</span>T1_to_MNI_lin.mat
+</code></pre></div>
+<p>The MNI brain mask is warped back to native space via the inverse FNIRT warp for brain extraction.</p>
+<h3 id="tissue-type-segmentation">Tissue-Type Segmentation<a class="headerlink" href="#tissue-type-segmentation" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>fast<span class="w"> </span>-o<span class="w"> </span>T1_fast<span class="w"> </span>-l<span class="w"> </span><span class="m">20</span><span class="w"> </span>-b<span class="w"> </span>-B<span class="w"> </span>-t<span class="w"> </span><span class="m">1</span><span class="w"> </span>--iter<span class="o">=</span><span class="m">10</span><span class="w"> </span>T1_biascorr_maskedbrain
+</code></pre></div>
+<p>The bias field is refined using FAST, and the corrected image is re-warped to MNI.</p>
+<h3 id="skull-constrained-volume-estimation">Skull-Constrained Volume Estimation<a class="headerlink" href="#skull-constrained-volume-estimation" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>pairreg<span class="w"> </span>MNI152_T1_2mm_brain<span class="w"> </span>T1_biascorr_bet<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">        </span>MNI152_T1_2mm_skull<span class="w"> </span>T1_biascorr_bet_skull<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">        </span>T12std_skullcon.mat
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>avscale<span class="w"> </span>T12std_skullcon.mat<span class="w">  </span><span class="c1"># → vscale</span>
+</code></pre></div>
+<p>Grey and white matter volumes are scaled by <code>vscale</code> and written to <code>T1_vols.txt</code>.</p>
+<h3 id="subcortical-segmentation">Subcortical Segmentation<a class="headerlink" href="#subcortical-segmentation" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>first_flirt<span class="w"> </span>T1_biascorr<span class="w"> </span>T1_biascorr_to_std_sub
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>run_first_all<span class="w"> </span>-i<span class="w"> </span>T1_biascorr<span class="w"> </span>-o<span class="w"> </span>first_results/T1_first<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">              </span>-a<span class="w"> </span>T1_biascorr_to_std_sub.mat
+</code></pre></div>
+<hr />
+<h2 id="internal-helper-functions">Internal Helper Functions<a class="headerlink" href="#internal-helper-functions" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>quick_smooth(in, out)</code></td>
+<td>Fast Gaussian smoothing approximation via 4× subsampling + FLIRT resampling. Used for large-scale bias estimation.</td>
+</tr>
+<tr>
+<td><code>get_opt1(arg)</code></td>
+<td>Extracts option name (before <code>=</code>) from a <code>--key=value</code> argument</td>
+</tr>
+<tr>
+<td><code>get_arg1(arg)</code></td>
+<td>Extracts value (after <code>=</code>) from <code>--key=value</code>; exits if no value</td>
+</tr>
+<tr>
+<td><code>get_imarg1(arg)</code></td>
+<td>Like <code>get_arg1</code> but also strips the image extension using <code>remove_ext</code></td>
+</tr>
+<tr>
+<td><code>get_arg2(opt, val)</code></td>
+<td>Extracts value from <code>-key value</code> two-token pair</td>
+</tr>
+<tr>
+<td><code>run(cmd...)</code></td>
+<td>Logs the command at level 2 then executes it</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../output-organization/" class="md-footer__link md-footer__link--prev" aria-label="Previous: output_organization.sh — Final Output Organisation">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                output_organization.sh — Final Output Organisation
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../run-preprocessing/" class="md-footer__link md-footer__link--next" aria-label="Next: run_preprocessing.sh — FreeSurfer-Based Intensity Normalisation">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                run_preprocessing.sh — FreeSurfer-Based Intensity Normalisation
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
