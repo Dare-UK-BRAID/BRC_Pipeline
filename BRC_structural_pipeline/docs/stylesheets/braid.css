@@ -1,7 +1,7 @@
 /* ================================================================
    BRAID theme — light blue accent, no cyan
    Primary dark:  #282832
-   Accent blue:   #4a9eda
+   Accent blue:   #8DBBCC
    Accent pink:   #ff7a94  (warnings only)
    ================================================================ */
 
@@ -12,13 +12,13 @@
 
 /* ── Accent variable override ────────────────────────────────────────── */
 :root {
-  --braid-blue:   #4a9eda;
-  --braid-blue-light: #d0e8f7;
-  --braid-blue-mid:   #1565c0;
+  --braid-blue:   #8DBBCC;
+  --braid-blue-light: #d6eaf1;
+  --braid-blue-mid:   #5a9ab0;
   --braid-pink:   #ff7a94;
   --braid-dark:   #282832;
-  --md-accent-fg-color: #4a9eda;
-  --md-accent-fg-color--transparent: rgba(74, 158, 218, 0.1);
+  --md-accent-fg-color: #8DBBCC;
+  --md-accent-fg-color--transparent: rgba(141, 187, 204, 0.1);
 }
 
 /* ── Navigation — black text, blue active accent ─────────────────────── */
@@ -33,7 +33,7 @@
 
 .md-nav__link--active,
 .md-nav__item--active > .md-nav__link {
-  border-left: 3px solid #4a9eda;
+  border-left: 3px solid #8DBBCC;
   padding-left: 0.4rem;
   font-weight: 700;
 }
@@ -46,7 +46,7 @@
 .md-typeset a {
   color: #282832 !important;
   text-decoration: underline;
-  text-decoration-color: #4a9eda;
+  text-decoration-color: #8DBBCC;
   text-underline-offset: 2px;
 }
 
@@ -57,7 +57,7 @@
 
 /* ── Tables — blue shades ────────────────────────────────────────────── */
 .md-typeset table:not([class]) {
-  border: 1px solid #90c4e8;
+  border: 1px solid #8DBBCC;
   border-radius: 4px;
   overflow: hidden;
   display: table;
@@ -65,7 +65,7 @@
 }
 
 .md-typeset table:not([class]) th {
-  background-color: #1565c0;
+  background-color: #5a9ab0;
   color: #ffffff;
   white-space: nowrap;
   font-weight: 600;
@@ -76,11 +76,11 @@
 }
 
 .md-typeset table:not([class]) tr:nth-child(even) {
-  background-color: #e3f2fd;
+  background-color: #d6eaf1;
 }
 
 .md-typeset table:not([class]) td {
-  border-color: #90c4e8;
+  border-color: #8DBBCC;
 }
 
 /* First column: prevent variable names from wrapping */
@@ -97,7 +97,7 @@
 /* ── Admonitions ─────────────────────────────────────────────────────── */
 .md-typeset .admonition,
 .md-typeset details {
-  border-left-color: #4a9eda;
+  border-left-color: #8DBBCC;
 }
 
 /* Note / Info — light blue */
@@ -112,7 +112,7 @@
 .md-typeset .note > summary::before,
 .md-typeset .info > .admonition-title::before,
 .md-typeset .info > summary::before {
-  background-color: #4a9eda !important;
+  background-color: #8DBBCC !important;
   -webkit-mask-image: var(--md-admonition-icon--note);
   mask-image: var(--md-admonition-icon--note);
 }
@@ -121,7 +121,7 @@
 .md-typeset details.note,
 .md-typeset .admonition.info,
 .md-typeset details.info {
-  border-left-color: #4a9eda;
+  border-left-color: #8DBBCC;
 }
 
 /* Warning — BRAID pink */
@@ -149,12 +149,12 @@
 
 /* ── Permalink anchor ────────────────────────────────────────────────── */
 .md-typeset .headerlink {
-  color: #4a9eda !important;
+  color: #8DBBCC !important;
 }
 
 /* ── Code copy button ────────────────────────────────────────────────── */
 .md-clipboard:hover {
-  color: #4a9eda;
+  color: #8DBBCC;
 }
 
 /* ── Logo ────────────────────────────────────────────────────────────── */
@@ -179,7 +179,7 @@
 
 [data-md-color-scheme="slate"] .md-typeset a {
   color: #e8e8e8 !important;
-  text-decoration-color: #4a9eda;
+  text-decoration-color: #8DBBCC;
 }
 
 [data-md-color-scheme="slate"] .md-typeset a:hover {
