@@ -106,3 +106,12 @@ nav:
 
   - IDP Extraction:
     - idp/index.md
+
+  - Federated NeuroImaging Requirements:
+    - federated/index.md
+    - Egress & Privacy Risk Analysis: federated/egress.md
+    - Membership Inference Attacks: federated/membership-attacks.md
+    - Differential Privacy: federated/differential-privacy.md
+    - Secure Aggregation & MPC: federated/secure-aggregation.md
+    - Disclosure Thresholds: federated/thresholds.md
+    - Governance & Compliance: federated/compliance.md
