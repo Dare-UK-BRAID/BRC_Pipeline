@@ -16,7 +16,7 @@ result="${Subject}"         # Subject ID is the FIRST field
 echo $result >> ${GroupIDPFolder}/IDPs.txt
 ```
 
-The group-level `IDPs.txt` is a concatenation of **one row per participant**, with the subject identifier as the first column. If this file leaves the TRE — even for federated aggregation — it constitutes a direct release of individual-level health data. This is not a model parameter or aggregate statistic; it is a pseudonymised but highly re-identifiable personal data record.
+The group-level `IDPs.txt` is a concatenation of **one row per participant**, with the subject identifier as the first column. If this file leaves the TRE, even for federated aggregation, it constitutes a direct release of individual-level health data. This is not a model parameter or aggregate statistic; it is a pseudonymised but highly re-identifiable personal data record.
 
 **Risk:** **Critical**. This file must never be transmitted outside the TRE without applying the full suite of controls described in [Disclosure Thresholds](thresholds.md) and [Differential Privacy](differential-privacy.md).
 
@@ -28,14 +28,14 @@ The group-level `IDPs.txt` is a concatenation of **one row per participant**, wi
 
 The `brc_FS_get_IDPs` function extracts a comprehensive set of neuroanatomical phenotypes from FreeSurfer output, including:
 
-- **Subcortical volumes** (`aseg.stats`): bilateral hippocampus, amygdala, caudate, putamen, thalamus, pallidum, accumbens, brain stem — all left/right hemispheres
+- **Subcortical volumes** (`aseg.stats`): bilateral hippocampus, amygdala, caudate, putamen, thalamus, pallidum, accumbens, brain stem, all left/right hemispheres
 - **Cortical parcellation** (Desikan-Killiany, Destrieux, DKT, Brodmann): volume, thickness, and surface area per ROI across both hemispheres (~400–600 scalars per atlas)
 - **White matter intensity contrast** (`wg_lh_mean`, `wg_rh_mean`): left and right hemisphere WM/GM contrast
 - **Global metrics**: total intracranial volume (eTIV), brain-to-eTIV ratio, number of surface holes before fixing
 - **Hippocampal subfield volumes** (`HippSubfield_lh/rh`): 22 values per hemisphere
 - **Amygdala nuclei** (`AmygNuclei_lh/rh`): 10 values per hemisphere
 - **Brainstem segmentation**: 5 sub-compartment volumes
-- **FLAIR usage flag**: binary indicator of whether T2-FLAIR was used in FreeSurfer — reveals acquisition protocol
+- **FLAIR usage flag**: binary indicator of whether T2-FLAIR was used in FreeSurfer, reveals acquisition protocol
 
 ```python
 def save_data(data_dict, SUBJECTS_DIR):
@@ -77,7 +77,7 @@ echo "VSCALING $vscale" >> ${SienaxTempFolder}/report.sienax
 
 WMH volume is strongly correlated with **cerebrovascular disease burden**, age, and dementia risk. In cohorts enriched for dementia (e.g. DPUK datasets), a high WMH volume is a sensitive attribute. Combined with demographic co-variates, it narrows the identifiable population.
 
-The BIANCA classifier used (`${BRC_GLOBAL_DIR}/templates/bianca_class_data`) is a **pre-trained model**. In a federated context, this raises the additional concern of model inversion — an adversary with access to the model weights could attempt to reconstruct properties of the training data.
+The BIANCA classifier used (`${BRC_GLOBAL_DIR}/templates/bianca_class_data`) is a **pre-trained model**. In a federated context, this raises the additional concern of model inversion, an adversary with access to the model weights could attempt to reconstruct properties of the training data.
 
 ---
 
@@ -87,7 +87,7 @@ The BIANCA classifier used (`${BRC_GLOBAL_DIR}/templates/bianca_class_data`) is 
 
 ```bash
 for i in FA MD MO L1 L2 L3 ICVF ISOVF ODI ; do
-    # reads JHURois_${i}.txt — 50 JHU atlas ROI values per metric
+    # reads JHURois_${i}.txt, 50 JHU atlas ROI values per metric
     result="$result $miniResult"
 done
 ```
@@ -116,7 +116,7 @@ Three values are extracted: (1) registration cost at native space, (2) registrat
 
 **Risks:**
 - **Registration cost** metrics are sensitive to acquisition protocol and scanner hardware. They can act as **site-level fingerprints**, potentially re-identifying the contributing TRE even in aggregated outputs.
-- The **Jacobian deviation** metric (`result3`) encodes average local brain deformation — essentially a scalar summary of morphological difference from the MNI template. This correlates with pathology and age.
+- The **Jacobian deviation** metric (`result3`) encodes average local brain deformation, essentially a scalar summary of morphological difference from the MNI template. This correlates with pathology and age.
 
 ---
 
@@ -199,11 +199,11 @@ ICA-AROMA classifies components as signal vs motion noise. The **list of noise c
 
 ## Dataset-Wide Computations: Federated Architecture Constraints
 
-A federated deployment assumes that each site runs the pipeline independently on its local cohort and transmits only derived outputs. This assumption holds for most BRAID pipelines — but not all. Several computations are **inherently dataset-wide**: they cannot produce valid outputs unless all subjects' data is present simultaneously, which means they are architecturally incompatible with standard federated analytics.
+A federated deployment assumes that each site runs the pipeline independently on its local cohort and transmits only derived outputs. This assumption holds for most BRAID pipelines, but not all. Several computations are **inherently dataset-wide**: they cannot produce valid outputs unless all subjects' data is present simultaneously, which means they are architecturally incompatible with standard federated analytics.
 
 ### Computations That Require the Entire Dataset
 
-#### MELODIC Group ICA — `Melodic_Processing.sh`
+#### MELODIC Group ICA, `Melodic_Processing.sh`
 
 ```bash
 $FSLDIR/bin/melodic \
@@ -211,13 +211,13 @@ $FSLDIR/bin/melodic \
     --approach=${ICAapproach}   # concat or tica
 ```
 
-`InputFiles` is a file listing every subject's preprocessed fMRI. MELODIC factorises the **concatenated or tensor-decomposed** group dataset. The resulting spatial maps are a property of the whole cohort — they change if any subject is added or removed. This cannot be run per-site and combined because ICA is a global decomposition with no separable local update.
+`InputFiles` is a file listing every subject's preprocessed fMRI. MELODIC factorises the **concatenated or tensor-decomposed** group dataset. The resulting spatial maps are a property of the whole cohort, they change if any subject is added or removed. This cannot be run per-site and combined because ICA is a global decomposition with no separable local update.
 
-#### Dual Regression — `Dual_Regression_Processing.sh`
+#### Dual Regression, `Dual_Regression_Processing.sh`
 
 Dual regression takes the MELODIC group maps as its primary input. Even though each regression step processes one subject at a time, the **maps are derived from the whole cohort**. Change the group ICA and all dual regression outputs change. This is a two-stage dataset dependency: federating dual regression requires first solving the group ICA problem across sites.
 
-#### FSLNets Group GLM — `nets_glm.m`
+#### FSLNets Group GLM, `nets_glm.m`
 
 ```matlab
 [p_uncorrected, p_corrected] = nets_glm(netmats, design_matrix, contrast_matrix, ...)
@@ -225,7 +225,7 @@ Dual regression takes the MELODIC group maps as its primary input. Even though e
 
 FSL `randomise`-based permutation testing requires the full subjects × features matrix (`netmats`) to be present simultaneously to build the design and compute the permutation distribution. No partial site contribution is meaningful without the whole.
 
-#### Standard TBSS — but not as implemented here
+#### Standard TBSS, but not as implemented here
 
 Classical TBSS computes a **group mean FA image and group-derived skeleton**, then projects all subjects onto that skeleton. This is dataset-wide. However, the BRC implementation adapts TBSS for single-subject use:
 
@@ -234,7 +234,7 @@ Classical TBSS computes a **group mean FA image and group-derived skeleton**, th
 ${FSLDIR}/bin/imcp ../FA/dti_FA_to_MNI all_FA   # copies ONE subject, not a group concat
 ```
 
-Instead of a cohort-derived mean, the BRC pipeline uses the **fixed MNI `FMRIB58_FA_1mm` template** as the skeleton reference. The IDP output (`JHUrois_FA.txt`) is therefore each subject's own mean FA within each JHU atlas ROI — no cross-subject statistic is involved. This is fully federable, but note that the resulting IDPs are not directly comparable to those produced by group-mode TBSS.
+Instead of a cohort-derived mean, the BRC pipeline uses the **fixed MNI `FMRIB58_FA_1mm` template** as the skeleton reference. The IDP output (`JHUrois_FA.txt`) is therefore each subject's own mean FA within each JHU atlas ROI, no cross-subject statistic is involved. This is fully federable, but note that the resulting IDPs are not directly comparable to those produced by group-mode TBSS.
 
 ### Computations That Appear Dataset-Wide But Are Per-Subject
 
@@ -242,7 +242,7 @@ Instead of a cohort-derived mean, the BRC pipeline uses the **fixed MNI `FMRIB58
 |------------|------|----------------------|
 | fMRI intensity normalisation | `Intensity_Normalization.sh` | Scales to fixed constant 10,000 (`-ing 10000`), not a cohort mean |
 | SIENAX VSCALING | `run_T1_sienax.sh` | Registers to fixed `MNI152_T1_2mm` template; no cohort statistics |
-| FSLNets variance normalisation | `nets_load.m` | `grot/std(grot(:))` — divides by each subject's **own** timeseries stddev |
+| FSLNets variance normalisation | `nets_load.m` | `grot/std(grot(:))`, divides by each subject's **own** timeseries stddev |
 | FreeSurfer IDP extraction | `brc_FS_get_IDPs.py` | Processes one subject at a time; `asegstats2table --subjects subject_ID` |
 | BIANCA WMH segmentation | `run_T2_bianca.sh` | Per-subject inference using a fixed pre-trained classifier |
 | Eddy correction | `run_eddy.sh` | Per-volume within a single subject's acquisition |
@@ -254,9 +254,9 @@ Instead of a cohort-derived mean, the BRC pipeline uses the **fixed MNI `FMRIB58
 
 | Pipeline | Federable as-is? | Blocker (if any) |
 |----------|:---:|------------------|
-| Structural (T1/T2) | **Yes** | None — all steps per-subject |
+| Structural (T1/T2) | **Yes** | None, all steps per-subject |
 | Diffusion (dMRI, TBSS IDPs) | **Yes** | BRC TBSS uses fixed MNI template |
-| Perfusion (ASL/pCASL) | **Yes** | None — all steps per-subject |
+| Perfusion (ASL/pCASL) | **Yes** | None, all steps per-subject |
 | IDP Extraction | **Yes** | Aggregation step only; see [Egress risks above](#critical-risk-the-idp-matrix-idpstxt) |
 | Functional (fMRI preprocessing) | **Yes** | Preprocessing per-subject; ICA-AROMA uses pre-trained classifier |
 | Functional Group Analysis | **No** | MELODIC requires all subjects; dual regression and FSLNets GLM depend on it |
@@ -281,9 +281,9 @@ Instead of a cohort-derived mean, the BRC pipeline uses the **fixed MNI `FMRIB58
 
 ## References
 
-- Wachinger, C. et al. (2015). BrainPrint. *NeuroImage*, 109, 232–248.
-- Finn, E.S. et al. (2015). Functional connectome fingerprinting. *Nature Neuroscience*, 18(11), 1664–1671.
-- Mansour, L. et al. (2021). Connectome-based fingerprinting: reproducibility across sites and cohorts. *NeuroImage*, 232, 117852.
-- Melis, L. et al. (2019). Exploiting unintended feature leakage in collaborative learning. *IEEE S&P 2019*.
-- UK GDPR Article 9 — Special categories of personal data.
-- DPUK Data Provider Handbook (2024). Dementias Platform UK.
+- Wachinger, C. et al. (2015). BrainPrint: A discriminative characterization of brain morphology. *NeuroImage*, 109, 232–248. [https://doi.org/10.1016/j.neuroimage.2015.01.007](https://doi.org/10.1016/j.neuroimage.2015.01.007)
+- Finn, E.S. et al. (2015). Functional connectome fingerprinting: identifying individuals using patterns of brain connectivity. *Nature Neuroscience*, 18(11), 1664–1671. [https://doi.org/10.1038/nn.4135](https://doi.org/10.1038/nn.4135)
+- Mansour, L. et al. (2021). Connectome-based fingerprinting: reproducibility across sites and cohorts. *NeuroImage*, 232, 117852. [https://doi.org/10.1016/j.neuroimage.2021.117852](https://doi.org/10.1016/j.neuroimage.2021.117852)
+- Melis, L. et al. (2019). Exploiting unintended feature leakage in collaborative learning. *IEEE Symposium on Security and Privacy*. [https://doi.org/10.1109/SP.2019.00009](https://doi.org/10.1109/SP.2019.00009)
+- UK GDPR Article 9, Special categories of personal data. ICO guidance: [https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/special-category-data/](https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/special-category-data/)
+- DPUK Data Provider Handbook (2024). Dementias Platform UK. [https://portal.dementiasplatform.uk](https://portal.dementiasplatform.uk)

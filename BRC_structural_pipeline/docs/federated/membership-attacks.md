@@ -24,7 +24,7 @@ Consider the IDP extraction aggregating TBSS FA values across 50 JHU ROIs for a 
 
 ### Scenario 1: WMH Volume Attack
 
-BIANCA computes a single WMH volume per subject (`volume.txt`). In a dementia cohort, WMH volumes are often highly skewed — a small number of participants have very large lesion loads. If a site releases the mean WMH volume and an adversary knows that a specific patient (whose scan is externally available) has extreme WMH, the presence of that patient in the cohort will shift the site mean. For cohorts of <50, this shift is detectable with standard statistical tests.
+BIANCA computes a single WMH volume per subject (`volume.txt`). In a dementia cohort, WMH volumes are often highly skewed, a small number of participants have very large lesion loads. If a site releases the mean WMH volume and an adversary knows that a specific patient (whose scan is externally available) has extreme WMH, the presence of that patient in the cohort will shift the site mean. For cohorts of <50, this shift is detectable with standard statistical tests.
 
 **Attack power:** High for outlier individuals (extreme phenotypes), moderate for typical values.
 
@@ -85,7 +85,7 @@ In federated learning contexts, **clip gradients before aggregation** to a maxim
 
 ### 6. AI Triage (DPUK Process)
 
-Under the DPUK Data Access Process, AI/ML projects undergo an **AI Triage** (step 6) to assess the risk of data disclosure before any results are released. Federated learning outputs — including aggregated model weights, gradients, and IDP statistics — must pass this triage.
+Under the DPUK Data Access Process, AI/ML projects undergo an **AI Triage** (step 6) to assess the risk of data disclosure before any results are released. Federated learning outputs, including aggregated model weights, gradients, and IDP statistics, must pass this triage.
 
 ---
 
@@ -94,8 +94,8 @@ Under the DPUK Data Access Process, AI/ML projects undergo an **AI Triage** (ste
 Before deploying a federated IDP analysis, the following empirical evaluation is recommended:
 
 1. **Run a shadow model attack** on synthetic data with the same dimensionality and distribution as the BRAID IDPs to establish baseline MIA success rates
-2. **Compute the per-feature sensitivity** (maximum change in the aggregate statistic when a single participant is added or removed) — high-sensitivity features should be suppressed or receive more DP noise
-3. **Measure the ROC-AUC of a membership classifier** trained on known members vs. non-members using the proposed aggregation scheme — a target AUC < 0.55 indicates adequate protection
+2. **Compute the per-feature sensitivity** (maximum change in the aggregate statistic when a single participant is added or removed), high-sensitivity features should be suppressed or receive more DP noise
+3. **Measure the ROC-AUC of a membership classifier** trained on known members vs. non-members using the proposed aggregation scheme, a target AUC < 0.55 indicates adequate protection
 
 ---
 

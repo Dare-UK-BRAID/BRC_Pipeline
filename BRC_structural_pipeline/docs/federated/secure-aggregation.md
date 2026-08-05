@@ -1,16 +1,16 @@
 # Secure Aggregation & MPC
 
-**Secure aggregation** and **multi-party computation (MPC)** are cryptographic techniques that allow multiple parties (TRE sites) to collaboratively compute a function over their combined data without any party — including the central aggregator — seeing the individual inputs. In federated neuroimaging, these protocols protect individual site-level IDP statistics and model gradients from being observed during transmission and aggregation.
+**Secure aggregation** and **multi-party computation (MPC)** are cryptographic techniques that allow multiple parties (TRE sites) to collaboratively compute a function over their combined data without any party, including the central aggregator, seeing the individual inputs. In federated neuroimaging, these protocols protect individual site-level IDP statistics and model gradients from being observed during transmission and aggregation.
 
 ---
 
 ## Why Secure Aggregation is Needed
 
-Differential Privacy (see [Differential Privacy](differential-privacy.md)) protects the **outputs** of the aggregation — i.e. what the aggregator releases. But it does not protect the **inputs**: if sites transmit their raw local IDP means, gradient vectors, or unprotected model updates, the aggregator (or an adversary who intercepts the transmission) can observe individual site contributions.
+Differential Privacy (see [Differential Privacy](differential-privacy.md)) protects the **outputs** of the aggregation, i.e. what the aggregator releases. But it does not protect the **inputs**: if sites transmit their raw local IDP means, gradient vectors, or unprotected model updates, the aggregator (or an adversary who intercepts the transmission) can observe individual site contributions.
 
 This is particularly important in the BRAID federated context because:
 
-1. **Small TRE cohorts**: A site with 20 participants has a local IDP mean that differs only slightly from individual values — seeing the local mean is nearly as identifying as seeing the raw data
+1. **Small TRE cohorts**: A site with 20 participants has a local IDP mean that differs only slightly from individual values, seeing the local mean is nearly as identifying as seeing the raw data
 2. **Cross-site collusion**: In a federated network where one site is compromised, that site's operator can observe all transmissions it participates in
 3. **Gradient inversion**: Unprotected gradient updates in a federated learning model can be inverted to reconstruct individual BRAID IDP values (Zhu et al., 2019)
 4. **TRE network perimeter**: Even within accredited TRE infrastructure (e.g. DPUK/SeRP), transmissions between sites pass over networks that may not be fully under each TRE's control
@@ -28,11 +28,11 @@ The most widely deployed secure aggregation protocol for federated learning was 
 3. **Cancellation**: The masks are designed to cancel pairwise: site i adds +s_{ij} and site j adds -s_{ij}. When all site transmissions are summed, the masks cancel and the server recovers Σ_i u_i exactly
 4. **Dropout handling**: If some sites drop out mid-round, a secret sharing scheme (Shamir, 1979) is used to reconstruct missing masks
 
-The server **never sees** any individual u_i — only the aggregate sum.
+The server **never sees** any individual u_i, only the aggregate sum.
 
 **Applicability to BRAID:**
 
-This protocol is directly applicable to federated IDP aggregation. Each site computes its local IDP statistics (mean, count), adds pairwise masks, and transmits the masked vector. The aggregator recovers the sum and divides by total N to obtain the global IDP mean — without observing any site's individual contribution.
+This protocol is directly applicable to federated IDP aggregation. Each site computes its local IDP statistics (mean, count), adds pairwise masks, and transmits the masked vector. The aggregator recovers the sum and divides by total N to obtain the global IDP mean, without observing any site's individual contribution.
 
 ---
 

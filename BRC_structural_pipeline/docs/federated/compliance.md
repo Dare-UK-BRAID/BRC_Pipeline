@@ -50,7 +50,7 @@ A federated neuroimaging study using BRAID pipelines must include the following 
 1. **Federated protocol specification**: Description of the aggregation methodology, including what is transmitted, by whom, to whom, and when
 2. **Aggregator identity and jurisdiction**: Full legal name, registered address, and data protection registration of the entity operating the central aggregator
 3. **Output controls**: Explicit specification of the disclosure thresholds and DP parameters applied before transmission
-4. **Prohibited outputs**: List of files and data types that must never be transmitted (raw IDPs, log files, registration matrices — see [Egress Risk Analysis](egress.md))
+4. **Prohibited outputs**: List of files and data types that must never be transmitted (raw IDPs, log files, registration matrices, see [Egress Risk Analysis](egress.md))
 5. **Breach notification**: Protocol for notifying DPUK and the ICO within 72 hours if a data breach occurs in the federated channel
 6. **Audit rights**: DPUK retains the right to audit the aggregator's logs and security controls
 7. **Retention and deletion**: Aggregated statistics may not be retained by the aggregator beyond the study end date without a separate legal basis
@@ -116,7 +116,7 @@ A DP noise injection step should be inserted after local IDP statistics are comp
 The following files must be explicitly excluded from any federated transmission mechanism:
 
 - `log/log.txt` (all pipelines)
-- `IDPs.txt` (per-subject and group — the raw files, not aggregated statistics derived from them)
+- `IDPs.txt` (per-subject and group, the raw files, not aggregated statistics derived from them)
 - `FS_IDPs.txt` (per-subject FreeSurfer file)
 - `*.mat` registration matrices
 - `*_warp*.nii.gz` warp field images
@@ -166,8 +166,8 @@ The federated orchestration layer should enforce minimum cohort sizes at the sit
 - DPUK Data Provider Handbook (2024). Dementias Platform UK.
 - UK GDPR / Data Protection Act 2018. ICO guidance: ico.org.uk.
 - NHS Digital (2023). *Data Security and Protection Toolkit*.
-- UK Digital Economy Act 2017 — Accredited researcher status and data sharing.
-- ISO/IEC 27001:2022 — Information security management systems.
+- UK Digital Economy Act 2017, Accredited researcher status and data sharing.
+- ISO/IEC 27001:2022, Information security management systems.
 - Health Data Research UK. *Five Safes Framework*.
 - SACRO: Statistical Controlled Automated Release Output. UK TRE Community, 2023.
 - Rieke, N. et al. (2020). The future of digital health with federated learning. *npj Digital Medicine*, 3, 119.

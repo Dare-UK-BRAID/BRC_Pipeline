@@ -106,7 +106,7 @@ For hippocampal volume (sensitivity = 3,500 mm³) with n = 100 participants and 
 - Mean sensitivity = 3,500 / 100 = 35 mm³
 - σ = 35 × √(2 × ln(1.25/10⁻⁵)) / 1.0 ≈ 35 × √(2 × 11.45) / 1.0 ≈ 35 × 4.78 ≈ **167 mm³**
 
-A true hippocampal mean of ~3,000 mm³ with noise σ = 167 mm³ (5.6% noise) is acceptable for most neuroscience applications. With n = 30, σ increases to ~559 mm³ (18.6% noise), which is likely too high for meaningful federated analysis — reinforcing the minimum cohort size requirement.
+A true hippocampal mean of ~3,000 mm³ with noise σ = 167 mm³ (5.6% noise) is acceptable for most neuroscience applications. With n = 30, σ increases to ~559 mm³ (18.6% noise), which is likely too high for meaningful federated analysis, reinforcing the minimum cohort size requirement.
 
 ### Step 4: Privacy Composition
 
@@ -140,7 +140,7 @@ DP provides formal guarantees, but several practical challenges arise in neuroim
 - **Repeated queries**: Federated learning involves many rounds of gradient aggregation. Each round consumes privacy budget. The total training budget must be planned in advance
 
 !!! warning "DP does not protect against all attacks"
-    DP bounds the information leaked about any single individual in the aggregate output, but it does not prevent an adversary from learning general population statistics — which is the intended purpose of the analysis. DP noise also does not protect against compromised aggregators or man-in-the-middle attacks during transmission. Secure aggregation (see [Secure Aggregation & MPC](secure-aggregation.md)) is needed to address those threats.
+    DP bounds the information leaked about any single individual in the aggregate output, but it does not prevent an adversary from learning general population statistics, which is the intended purpose of the analysis. DP noise also does not protect against compromised aggregators or man-in-the-middle attacks during transmission. Secure aggregation (see [Secure Aggregation & MPC](secure-aggregation.md)) is needed to address those threats.
 
 ---
 
