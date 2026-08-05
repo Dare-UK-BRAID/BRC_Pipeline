@@ -12,13 +12,13 @@
         <meta name="author" content="Ali-Reza Mohammadi-Nejad & Stamatios N Sotiropoulos">
       
       
-        <link rel="canonical" href="https://dare-uk-braid.github.io/BRC_Pipeline/scripts/struc-preproc-part2/">
+        <link rel="canonical" href="https://dare-uk-braid.github.io/BRC_Pipeline/federated/membership-attacks/">
       
       
-        <link rel="prev" href="../struc-preproc-part1/">
+        <link rel="prev" href="../egress/">
       
       
-        <link rel="next" href="../struc-preproc-part3/">
+        <link rel="next" href="../differential-privacy/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>struc_preproc_part_2.sh — FreeSurfer Reconstruction - BRAID Neuroimaging Pipelines</title>
+        <title>Membership Inference Attacks - BRAID Neuroimaging Pipelines</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#struc_preproc_part_2sh-freesurfer-reconstruction" class="md-skip">
+        <a href="#membership-inference-attacks" class="md-skip">
           Skip to content
         </a>
       
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              struc_preproc_part_2.sh — FreeSurfer Reconstruction
+              Membership Inference Attacks
             
           </span>
         </div>
@@ -315,10 +315,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -339,11 +337,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -364,7 +362,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -435,8 +433,6 @@
                 
   
   
-    
-  
   
   
     
@@ -460,15 +456,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../scripts/" class="md-nav__link ">
               
   
   
@@ -492,7 +488,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -509,10 +505,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -530,11 +524,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_2" >
         
           
           <label class="md-nav__link" for="__nav_3_3_2" id="__nav_3_3_2_label" tabindex="0">
@@ -555,7 +549,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -573,7 +567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../struc-preproc/" class="md-nav__link">
+      <a href="../../scripts/struc-preproc/" class="md-nav__link">
         
   
   
@@ -601,7 +595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../struc-preproc-part1/" class="md-nav__link">
+      <a href="../../scripts/struc-preproc-part1/" class="md-nav__link">
         
   
   
@@ -626,37 +620,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    struc_preproc_part_2.sh — FreeSurfer Reconstruction
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../scripts/struc-preproc-part2/" class="md-nav__link">
         
   
   
@@ -672,70 +639,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#purpose" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Purpose
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parameters
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#outputs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Outputs
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#commands-executed" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Commands Executed
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -748,7 +651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../struc-preproc-part3/" class="md-nav__link">
+      <a href="../../scripts/struc-preproc-part3/" class="md-nav__link">
         
   
   
@@ -839,7 +742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../t1-preprocessing/" class="md-nav__link">
+      <a href="../../scripts/t1-preprocessing/" class="md-nav__link">
         
   
   
@@ -867,7 +770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../t2-preprocessing/" class="md-nav__link">
+      <a href="../../scripts/t2-preprocessing/" class="md-nav__link">
         
   
   
@@ -958,7 +861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../t1-sienax/" class="md-nav__link">
+      <a href="../../scripts/t1-sienax/" class="md-nav__link">
         
   
   
@@ -986,7 +889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../t2-bianca/" class="md-nav__link">
+      <a href="../../scripts/t2-bianca/" class="md-nav__link">
         
   
   
@@ -1081,7 +984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../output-organization/" class="md-nav__link">
+      <a href="../../scripts/output-organization/" class="md-nav__link">
         
   
   
@@ -1109,7 +1012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fsl-anat/" class="md-nav__link">
+      <a href="../../scripts/fsl-anat/" class="md-nav__link">
         
   
   
@@ -1137,7 +1040,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../run-preprocessing/" class="md-nav__link">
+      <a href="../../scripts/run-preprocessing/" class="md-nav__link">
         
   
   
@@ -1165,7 +1068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../move-rename/" class="md-nav__link">
+      <a href="../../scripts/move-rename/" class="md-nav__link">
         
   
   
@@ -1707,6 +1610,8 @@
       
   
   
+    
+  
   
   
     
@@ -1737,15 +1642,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../federated/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -1769,7 +1674,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1789,7 +1694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../federated/egress/" class="md-nav__link">
+      <a href="../egress/" class="md-nav__link">
         
   
   
@@ -1814,10 +1719,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../federated/membership-attacks/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Membership Inference Attacks
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1833,6 +1765,242 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-neuroimaging-idps-are-particularly-vulnerable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Neuroimaging IDPs Are Particularly Vulnerable
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Why Neuroimaging IDPs Are Particularly Vulnerable">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#high-dimensionality-and-uniqueness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        High Dimensionality and Uniqueness
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-population-mean-is-not-safe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Population Mean is Not Safe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attack-scenarios-specific-to-braid-pipelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attack Scenarios Specific to BRAID Pipelines
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Attack Scenarios Specific to BRAID Pipelines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-1-wmh-volume-attack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 1: WMH Volume Attack
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-2-freesurfer-subfield-volume-attack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 2: FreeSurfer Subfield Volume Attack
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-3-ica-component-attack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 3: ICA Component Attack
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-4-gradient-leakage-in-federated-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 4: Gradient Leakage in Federated Learning
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attack-surface-in-the-current-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attack Surface in the Current Pipeline
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defences-against-membership-inference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defences Against Membership Inference
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Defences Against Membership Inference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-minimum-cohort-size-thresholds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Minimum Cohort Size Thresholds
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-differential-privacy-dp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Differential Privacy (DP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-secure-aggregation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Secure Aggregation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-output-perturbation-for-outliers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Output Perturbation for Outliers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-gradient-clipping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Gradient Clipping
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-ai-triage-dpuk-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. AI Triage (DPUK Process)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quantifying-mia-risk-the-empirical-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quantifying MIA Risk: The Empirical Approach
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1845,7 +2013,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../federated/differential-privacy/" class="md-nav__link">
+      <a href="../differential-privacy/" class="md-nav__link">
         
   
   
@@ -1873,7 +2041,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../federated/secure-aggregation/" class="md-nav__link">
+      <a href="../secure-aggregation/" class="md-nav__link">
         
   
   
@@ -1901,7 +2069,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../federated/thresholds/" class="md-nav__link">
+      <a href="../thresholds/" class="md-nav__link">
         
   
   
@@ -1929,7 +2097,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../federated/compliance/" class="md-nav__link">
+      <a href="../compliance/" class="md-nav__link">
         
   
   
@@ -1984,10 +2152,110 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#purpose" class="md-nav__link">
+  <a href="#why-neuroimaging-idps-are-particularly-vulnerable" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Purpose
+        Why Neuroimaging IDPs Are Particularly Vulnerable
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Why Neuroimaging IDPs Are Particularly Vulnerable">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#high-dimensionality-and-uniqueness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        High Dimensionality and Uniqueness
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-population-mean-is-not-safe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Population Mean is Not Safe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attack-scenarios-specific-to-braid-pipelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attack Scenarios Specific to BRAID Pipelines
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Attack Scenarios Specific to BRAID Pipelines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-1-wmh-volume-attack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 1: WMH Volume Attack
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-2-freesurfer-subfield-volume-attack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 2: FreeSurfer Subfield Volume Attack
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-3-ica-component-attack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 3: ICA Component Attack
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-4-gradient-leakage-in-federated-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 4: Gradient Leakage in Federated Learning
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attack-surface-in-the-current-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attack Surface in the Current Pipeline
       
     </span>
   </a>
@@ -1995,10 +2263,93 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
+  <a href="#defences-against-membership-inference" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Parameters
+        Defences Against Membership Inference
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Defences Against Membership Inference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-minimum-cohort-size-thresholds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Minimum Cohort Size Thresholds
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-differential-privacy-dp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Differential Privacy (DP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-secure-aggregation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Secure Aggregation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-output-perturbation-for-outliers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Output Perturbation for Outliers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-gradient-clipping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Gradient Clipping
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-ai-triage-dpuk-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. AI Triage (DPUK Process)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quantifying-mia-risk-the-empirical-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quantifying MIA Risk: The Empirical Approach
       
     </span>
   </a>
@@ -2006,21 +2357,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#outputs" class="md-nav__link">
+  <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Outputs
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#commands-executed" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Commands Executed
+        References
       
     </span>
   </a>
@@ -2047,87 +2387,124 @@
   
 
 
-<h1 id="struc_preproc_part_2sh-freesurfer-reconstruction">struc_preproc_part_2.sh — FreeSurfer Reconstruction<a class="headerlink" href="#struc_preproc_part_2sh-freesurfer-reconstruction" title="Permanent link">&para;</a></h1>
-<p><strong>Location:</strong> <code>BRC_structural_pipeline/scripts/struc_preproc_part_2.sh</code></p>
+<h1 id="membership-inference-attacks">Membership Inference Attacks<a class="headerlink" href="#membership-inference-attacks" title="Permanent link">&para;</a></h1>
+<p>A <strong>membership inference attack (MIA)</strong> is an adversarial technique in which an attacker, given a trained model or a set of aggregate statistics, determines whether a specific individual was present in the dataset used to produce those outputs. In the context of neuroimaging federated analytics, this translates to: <em>given the aggregated IDP statistics or model weights released from a TRE, can an adversary determine whether a specific patient was included in that site's cohort?</em></p>
+<p>This is the most practically relevant class of privacy attack for federated neuroimaging pipelines operating within the DPUK / Five Safes framework.</p>
 <hr />
-<h2 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h2>
-<p>Runs FreeSurfer full cortical reconstruction (<code>recon-all -all</code>) on the raw T1 image. When a T2-FLAIR image is also provided, it is passed to <code>recon-all</code> via the <code>-FLAIR</code> flag for improved cortical surface delineation. After reconstruction, the automatically created <code>fsaverage</code> symbolic link is removed to keep the output folder clean.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If <code>--dofreesurfer=no</code>, this script exits immediately without performing any work.</p>
-</div>
+<h2 id="why-neuroimaging-idps-are-particularly-vulnerable">Why Neuroimaging IDPs Are Particularly Vulnerable<a class="headerlink" href="#why-neuroimaging-idps-are-particularly-vulnerable" title="Permanent link">&para;</a></h2>
+<h3 id="high-dimensionality-and-uniqueness">High Dimensionality and Uniqueness<a class="headerlink" href="#high-dimensionality-and-uniqueness" title="Permanent link">&para;</a></h3>
+<p>As documented in the <a href="../egress/">Egress Risk Analysis</a>, the BRAID IDP pipeline extracts over 1,000 phenotypes per participant. High-dimensional phenotypic profiles are highly unique. An attacker who has access to a target individual's scan (e.g. from a clinical record or a public dataset) can compute that individual's IDP vector and compare it against aggregate IDP statistics released from a TRE to infer membership.</p>
+<p>The <strong>shadow model attack</strong> (Shokri et al., 2017) is the canonical MIA method: an adversary trains a meta-classifier on models trained on known members vs. non-members, then applies it to the target model. For neuroimaging, the analogous attack exploits the fact that <strong>aggregate statistics computed over a population including a highly anomalous brain (e.g. large WMH volume, extreme hippocampal atrophy) shift measurably</strong> compared to a population without that individual.</p>
+<h3 id="the-population-mean-is-not-safe">The Population Mean is Not Safe<a class="headerlink" href="#the-population-mean-is-not-safe" title="Permanent link">&para;</a></h3>
+<p>Consider the IDP extraction aggregating TBSS FA values across 50 JHU ROIs for a cohort. If a TRE releases a site-level mean FA vector (the minimal sufficient statistic for a federated mean), an adversary with access to a target individual's FA values can compute the <strong>likelihood ratio</strong> of observing those population means given that the individual is included vs. excluded. For small cohorts (e.g. &lt;30 participants), this test has substantial power.</p>
 <hr />
-<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
+<h2 id="attack-scenarios-specific-to-braid-pipelines">Attack Scenarios Specific to BRAID Pipelines<a class="headerlink" href="#attack-scenarios-specific-to-braid-pipelines" title="Permanent link">&para;</a></h2>
+<h3 id="scenario-1-wmh-volume-attack">Scenario 1: WMH Volume Attack<a class="headerlink" href="#scenario-1-wmh-volume-attack" title="Permanent link">&para;</a></h3>
+<p>BIANCA computes a single WMH volume per subject (<code>volume.txt</code>). In a dementia cohort, WMH volumes are often highly skewed — a small number of participants have very large lesion loads. If a site releases the mean WMH volume and an adversary knows that a specific patient (whose scan is externally available) has extreme WMH, the presence of that patient in the cohort will shift the site mean. For cohorts of &lt;50, this shift is detectable with standard statistical tests.</p>
+<p><strong>Attack power:</strong> High for outlier individuals (extreme phenotypes), moderate for typical values.</p>
+<h3 id="scenario-2-freesurfer-subfield-volume-attack">Scenario 2: FreeSurfer Subfield Volume Attack<a class="headerlink" href="#scenario-2-freesurfer-subfield-volume-attack" title="Permanent link">&para;</a></h3>
+<p>The hippocampal subfield volumes extracted by <code>gen_subsegmentation()</code> in <code>brc_FS_get_IDPs.py</code> produce 22 per-hemisphere values. In Alzheimer's disease cohorts, hippocampal CA1 subfield atrophy is a sensitive biomarker. An adversary who has run FreeSurfer on a target individual's clinical MRI can compare their subfield volumes against released aggregate statistics.</p>
+<h3 id="scenario-3-ica-component-attack">Scenario 3: ICA Component Attack<a class="headerlink" href="#scenario-3-ica-component-attack" title="Permanent link">&para;</a></h3>
+<p>In the functional pipeline, if ICA-AROMA spatial maps are transmitted (e.g. as part of a federated ICA analysis), adversaries can exploit the <strong>spatial uniqueness of noise components</strong> to fingerprint individuals. Demšar et al. (2021) showed that resting-state fMRI connectivity profiles identify individuals across sessions with &gt;90% accuracy.</p>
+<h3 id="scenario-4-gradient-leakage-in-federated-learning">Scenario 4: Gradient Leakage in Federated Learning<a class="headerlink" href="#scenario-4-gradient-leakage-in-federated-learning" title="Permanent link">&para;</a></h3>
+<p>If BRAID IDPs are used as inputs to a federated machine learning model (e.g. a federated neural network predicting dementia risk), <strong>gradient leakage</strong> becomes a concern. Zhu et al. (2019) demonstrated that raw training data can be reconstructed from gradients with high fidelity. Since each local gradient update in a federated learning round depends on the local training data (i.e. individual IDPs), an aggregator or a compromised participant can reconstruct individual IDP values from unprotected gradient transmissions.</p>
+<p>The risk is proportional to the <strong>batch size</strong>: single-sample gradients allow near-perfect reconstruction; larger batches provide partial protection. In small TRE cohorts, effective batch sizes may approach 1.</p>
+<hr />
+<h2 id="attack-surface-in-the-current-pipeline">Attack Surface in the Current Pipeline<a class="headerlink" href="#attack-surface-in-the-current-pipeline" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
+<th>Code Location</th>
+<th>MIA Attack Vector</th>
+<th>Severity</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>--dofreesurfer</code></td>
-<td>yes/no</td>
-<td>Master flag — must be <code>yes</code> for any processing to occur</td>
+<td><code>IDPs.txt</code> (group matrix)</td>
+<td>Direct individual rows transmitted</td>
+<td><strong>Critical</strong></td>
 </tr>
 <tr>
-<td><code>--processedt1folder</code></td>
-<td>Path</td>
-<td>Acts as <code>SUBJECTS_DIR</code> for FreeSurfer; reconstruction output goes here</td>
+<td><code>FS_IDPs.txt</code> per subject</td>
+<td>Individual phenotype vector</td>
+<td><strong>Critical</strong></td>
 </tr>
 <tr>
-<td><code>--fsfoldername</code></td>
-<td>String</td>
-<td>Subject name passed to <code>recon-all -s</code>; output is <code>processedt1folder/fsfoldername</code></td>
+<td>Site-level mean IDP vector</td>
+<td>Mean shift inference for outliers</td>
+<td><strong>High</strong></td>
 </tr>
 <tr>
-<td><code>--t2</code></td>
-<td>yes/no</td>
-<td>Whether a T2 image is available for FLAIR-guided reconstruction</td>
+<td>FreeSurfer subfield volumes</td>
+<td>Hippocampal fingerprint in AD cohorts</td>
+<td><strong>High</strong></td>
 </tr>
 <tr>
-<td><code>--rawt1folder</code></td>
-<td>Path</td>
-<td>Source directory for <code>T1_orig.nii.gz</code></td>
+<td>WMH volume (<code>volume.txt</code>)</td>
+<td>Outlier detection in skewed distributions</td>
+<td><strong>High</strong></td>
 </tr>
 <tr>
-<td><code>--rawt2folder</code></td>
-<td>Path</td>
-<td>Source directory for <code>T2_orig.nii.gz</code> (only when <code>--t2=yes</code>)</td>
+<td>TBSS FA/MD/ICVF per ROI</td>
+<td>White matter fingerprint</td>
+<td><strong>High</strong></td>
 </tr>
 <tr>
-<td><code>--logt1folder</code></td>
-<td>Path</td>
-<td>Log file path</td>
+<td>Federated model gradients</td>
+<td>Gradient inversion attacks</td>
+<td><strong>High</strong></td>
+</tr>
+<tr>
+<td>SIENAX brain volumes</td>
+<td>Head size / brain volume membership</td>
+<td><strong>Medium</strong></td>
+</tr>
+<tr>
+<td>SNR/CNR metrics</td>
+<td>Site fingerprinting enabling linkage</td>
+<td><strong>Medium</strong></td>
+</tr>
+<tr>
+<td>fMRI motion parameters</td>
+<td>Temporal motion trajectory fingerprint</td>
+<td><strong>Medium</strong></td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="outputs">Outputs<a class="headerlink" href="#outputs" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Output</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>&lt;processedT1Folder&gt;/FreeSurfer/</code></td>
-<td>Full FreeSurfer subject directory (<code>surf/</code>, <code>mri/</code>, <code>label/</code>, <code>stats/</code> sub-directories)</td>
-</tr>
-</tbody>
-</table>
+<h2 id="defences-against-membership-inference">Defences Against Membership Inference<a class="headerlink" href="#defences-against-membership-inference" title="Permanent link">&para;</a></h2>
+<h3 id="1-minimum-cohort-size-thresholds">1. Minimum Cohort Size Thresholds<a class="headerlink" href="#1-minimum-cohort-size-thresholds" title="Permanent link">&para;</a></h3>
+<p>Do not release site-level IDP statistics derived from cohorts smaller than a minimum threshold. DPUK and the UK ONS recommend a minimum cell size of <strong>10</strong> for simple statistics; for high-dimensional IDP data, we recommend <strong>n ≥ 50</strong> per site before releasing any aggregate statistics (see <a href="../thresholds/">Disclosure Thresholds</a>).</p>
+<h3 id="2-differential-privacy-dp">2. Differential Privacy (DP)<a class="headerlink" href="#2-differential-privacy-dp" title="Permanent link">&para;</a></h3>
+<p>Adding calibrated noise to IDP statistics before transmission provides provable bounds on membership inference success. A DP mechanism with privacy budget ε guarantees that the adversary's advantage in distinguishing a population with vs. without a target individual is bounded by e^ε. See <a href="../differential-privacy/">Differential Privacy</a> for implementation guidance.</p>
+<h3 id="3-secure-aggregation">3. Secure Aggregation<a class="headerlink" href="#3-secure-aggregation" title="Permanent link">&para;</a></h3>
+<p>If individual site contributions must be combined, use <strong>secure aggregation</strong> protocols (e.g. Bonawitz et al., 2017) to ensure that the aggregator sees only the sum of contributions, never individual site updates. This eliminates scenario 4 (gradient leakage) entirely. See <a href="../secure-aggregation/">Secure Aggregation &amp; MPC</a>.</p>
+<h3 id="4-output-perturbation-for-outliers">4. Output Perturbation for Outliers<a class="headerlink" href="#4-output-perturbation-for-outliers" title="Permanent link">&para;</a></h3>
+<p>For univariate outputs like WMH volume where outlier individuals are at high risk, apply <strong>top-coding</strong> (cap at a threshold, e.g. 95th percentile) before contributing to federated aggregation. This suppresses the most identifiable values.</p>
+<h3 id="5-gradient-clipping">5. Gradient Clipping<a class="headerlink" href="#5-gradient-clipping" title="Permanent link">&para;</a></h3>
+<p>In federated learning contexts, <strong>clip gradients before aggregation</strong> to a maximum L2 norm (typically 1.0–10.0). Gradient clipping is a prerequisite for applying DP noise and also independently reduces gradient inversion attack success.</p>
+<h3 id="6-ai-triage-dpuk-process">6. AI Triage (DPUK Process)<a class="headerlink" href="#6-ai-triage-dpuk-process" title="Permanent link">&para;</a></h3>
+<p>Under the DPUK Data Access Process, AI/ML projects undergo an <strong>AI Triage</strong> (step 6) to assess the risk of data disclosure before any results are released. Federated learning outputs — including aggregated model weights, gradients, and IDP statistics — must pass this triage.</p>
 <hr />
-<h2 id="commands-executed">Commands Executed<a class="headerlink" href="#commands-executed" title="Permanent link">&para;</a></h2>
-<p><strong>T1 only:</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>recon-all<span class="w"> </span>-i<span class="w"> </span>T1_orig.nii.gz<span class="w"> </span>-s<span class="w"> </span>FreeSurfer<span class="w"> </span>-all
-</code></pre></div></p>
-<p><strong>T1 + T2-FLAIR:</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>recon-all<span class="w"> </span>-i<span class="w"> </span>T1_orig.nii.gz<span class="w"> </span>-s<span class="w"> </span>FreeSurfer<span class="w"> </span>-FLAIR<span class="w"> </span>T2_orig.nii.gz<span class="w"> </span>-all
-</code></pre></div></p>
+<h2 id="quantifying-mia-risk-the-empirical-approach">Quantifying MIA Risk: The Empirical Approach<a class="headerlink" href="#quantifying-mia-risk-the-empirical-approach" title="Permanent link">&para;</a></h2>
+<p>Before deploying a federated IDP analysis, the following empirical evaluation is recommended:</p>
+<ol>
+<li><strong>Run a shadow model attack</strong> on synthetic data with the same dimensionality and distribution as the BRAID IDPs to establish baseline MIA success rates</li>
+<li><strong>Compute the per-feature sensitivity</strong> (maximum change in the aggregate statistic when a single participant is added or removed) — high-sensitivity features should be suppressed or receive more DP noise</li>
+<li><strong>Measure the ROC-AUC of a membership classifier</strong> trained on known members vs. non-members using the proposed aggregation scheme — a target AUC &lt; 0.55 indicates adequate protection</li>
+</ol>
+<hr />
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Shokri, R. et al. (2017). Membership inference attacks against machine learning models. <em>IEEE S&amp;P 2017</em>.</li>
+<li>Zhu, L. et al. (2019). Deep leakage from gradients. <em>NeurIPS 2019</em>.</li>
+<li>Carlini, N. et al. (2022). Membership inference attacks from first principles. <em>IEEE S&amp;P 2022</em>.</li>
+<li>Demšar, U. et al. (2021). Functional connectivity fingerprinting across multiple sites. <em>NeuroImage</em>.</li>
+<li>Bonawitz, K. et al. (2017). Practical secure aggregation for privacy-preserving machine learning. <em>ACM CCS 2017</em>.</li>
+<li>Kaissis, G. et al. (2021). End-to-end privacy preserving deep learning on multi-institutional medical imaging. <em>Nature Machine Intelligence</em>, 3, 473–484.</li>
+<li>Melis, L. et al. (2019). Exploiting unintended feature leakage in collaborative learning. <em>IEEE S&amp;P 2019</em>.</li>
+</ul>
 
 
 
@@ -2163,7 +2540,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../struc-preproc-part1/" class="md-footer__link md-footer__link--prev" aria-label="Previous: struc_preproc_part_1.sh — Stage 1 Dispatcher">
+          <a href="../egress/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Egress &amp; Privacy Risk Analysis">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2173,20 +2550,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                struc_preproc_part_1.sh — Stage 1 Dispatcher
+                Egress & Privacy Risk Analysis
               </div>
             </div>
           </a>
         
         
           
-          <a href="../struc-preproc-part3/" class="md-footer__link md-footer__link--next" aria-label="Next: struc_preproc_part_3.sh — FastSurfer + Output Organisation">
+          <a href="../differential-privacy/" class="md-footer__link md-footer__link--next" aria-label="Next: Differential Privacy">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                struc_preproc_part_3.sh — FastSurfer + Output Organisation
+                Differential Privacy
               </div>
             </div>
             <div class="md-footer__button md-icon">

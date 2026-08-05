@@ -12,13 +12,13 @@
         <meta name="author" content="Ali-Reza Mohammadi-Nejad & Stamatios N Sotiropoulos">
       
       
-        <link rel="canonical" href="https://dare-uk-braid.github.io/BRC_Pipeline/scripts/struc-preproc-part2/">
+        <link rel="canonical" href="https://dare-uk-braid.github.io/BRC_Pipeline/federated/thresholds/">
       
       
-        <link rel="prev" href="../struc-preproc-part1/">
+        <link rel="prev" href="../secure-aggregation/">
       
       
-        <link rel="next" href="../struc-preproc-part3/">
+        <link rel="next" href="../compliance/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>struc_preproc_part_2.sh — FreeSurfer Reconstruction - BRAID Neuroimaging Pipelines</title>
+        <title>Disclosure Thresholds - BRAID Neuroimaging Pipelines</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#struc_preproc_part_2sh-freesurfer-reconstruction" class="md-skip">
+        <a href="#disclosure-thresholds-output-controls" class="md-skip">
           Skip to content
         </a>
       
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              struc_preproc_part_2.sh — FreeSurfer Reconstruction
+              Disclosure Thresholds
             
           </span>
         </div>
@@ -315,10 +315,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -339,11 +337,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -364,7 +362,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -435,8 +433,6 @@
                 
   
   
-    
-  
   
   
     
@@ -460,15 +456,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../scripts/" class="md-nav__link ">
               
   
   
@@ -492,7 +488,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -509,10 +505,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -530,11 +524,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_2" >
         
           
           <label class="md-nav__link" for="__nav_3_3_2" id="__nav_3_3_2_label" tabindex="0">
@@ -555,7 +549,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -573,7 +567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../struc-preproc/" class="md-nav__link">
+      <a href="../../scripts/struc-preproc/" class="md-nav__link">
         
   
   
@@ -601,7 +595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../struc-preproc-part1/" class="md-nav__link">
+      <a href="../../scripts/struc-preproc-part1/" class="md-nav__link">
         
   
   
@@ -626,37 +620,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    struc_preproc_part_2.sh — FreeSurfer Reconstruction
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../scripts/struc-preproc-part2/" class="md-nav__link">
         
   
   
@@ -672,70 +639,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#purpose" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Purpose
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parameters
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#outputs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Outputs
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#commands-executed" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Commands Executed
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -748,7 +651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../struc-preproc-part3/" class="md-nav__link">
+      <a href="../../scripts/struc-preproc-part3/" class="md-nav__link">
         
   
   
@@ -839,7 +742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../t1-preprocessing/" class="md-nav__link">
+      <a href="../../scripts/t1-preprocessing/" class="md-nav__link">
         
   
   
@@ -867,7 +770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../t2-preprocessing/" class="md-nav__link">
+      <a href="../../scripts/t2-preprocessing/" class="md-nav__link">
         
   
   
@@ -958,7 +861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../t1-sienax/" class="md-nav__link">
+      <a href="../../scripts/t1-sienax/" class="md-nav__link">
         
   
   
@@ -986,7 +889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../t2-bianca/" class="md-nav__link">
+      <a href="../../scripts/t2-bianca/" class="md-nav__link">
         
   
   
@@ -1081,7 +984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../output-organization/" class="md-nav__link">
+      <a href="../../scripts/output-organization/" class="md-nav__link">
         
   
   
@@ -1109,7 +1012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fsl-anat/" class="md-nav__link">
+      <a href="../../scripts/fsl-anat/" class="md-nav__link">
         
   
   
@@ -1137,7 +1040,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../run-preprocessing/" class="md-nav__link">
+      <a href="../../scripts/run-preprocessing/" class="md-nav__link">
         
   
   
@@ -1165,7 +1068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../move-rename/" class="md-nav__link">
+      <a href="../../scripts/move-rename/" class="md-nav__link">
         
   
   
@@ -1707,6 +1610,8 @@
       
   
   
+    
+  
   
   
     
@@ -1737,15 +1642,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../federated/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -1769,7 +1674,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1789,7 +1694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../federated/egress/" class="md-nav__link">
+      <a href="../egress/" class="md-nav__link">
         
   
   
@@ -1817,7 +1722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../federated/membership-attacks/" class="md-nav__link">
+      <a href="../membership-attacks/" class="md-nav__link">
         
   
   
@@ -1845,7 +1750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../federated/differential-privacy/" class="md-nav__link">
+      <a href="../differential-privacy/" class="md-nav__link">
         
   
   
@@ -1873,7 +1778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../federated/secure-aggregation/" class="md-nav__link">
+      <a href="../secure-aggregation/" class="md-nav__link">
         
   
   
@@ -1898,10 +1803,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../federated/thresholds/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disclosure Thresholds
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1917,6 +1849,247 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General Principles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#minimum-cohort-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Minimum Cohort Size
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Minimum Cohort Size">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rule-1-absolute-minimum-n-10-dpuk-ons-standard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rule 1: Absolute minimum n ≥ 10 (DPUK / ONS standard)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rule-2-recommended-minimum-n-50-for-high-dimensional-idp-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rule 2: Recommended minimum n ≥ 50 for high-dimensional IDP data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rule-3-federated-round-minimum-n_total-100" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rule 3: Federated round minimum n_total ≥ 100
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cell-suppression-for-count-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell Suppression for Count Statistics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#idp-specific-output-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IDP-Specific Output Controls
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IDP-Specific Output Controls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#brain-volumes-sienax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brain Volumes (SIENAX)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#white-matter-hyperintensities-bianca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        White Matter Hyperintensities (BIANCA)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#freesurfer-idps-1000-scalars" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FreeSurfer IDPs (~1,000 scalars)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tbss-diffusion-idps-450-scalars" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TBSS Diffusion IDPs (450 scalars)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eddy-outlier-count" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eddy Outlier Count
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motion-parameters-fmri" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Motion Parameters (fMRI)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snr-cnr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SNR / CNR
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#log-file-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Log File Controls
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registration-matrices-and-spatial-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registration Matrices and Spatial Data
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sacro-and-automated-output-checking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SACRO and Automated Output Checking
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-submission-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output Submission Checklist
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1929,7 +2102,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../federated/compliance/" class="md-nav__link">
+      <a href="../compliance/" class="md-nav__link">
         
   
   
@@ -1984,10 +2157,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#purpose" class="md-nav__link">
+  <a href="#general-principles" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Purpose
+        General Principles
       
     </span>
   </a>
@@ -1995,10 +2168,60 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
+  <a href="#minimum-cohort-size" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Parameters
+        Minimum Cohort Size
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Minimum Cohort Size">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rule-1-absolute-minimum-n-10-dpuk-ons-standard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rule 1: Absolute minimum n ≥ 10 (DPUK / ONS standard)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rule-2-recommended-minimum-n-50-for-high-dimensional-idp-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rule 2: Recommended minimum n ≥ 50 for high-dimensional IDP data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rule-3-federated-round-minimum-n_total-100" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rule 3: Federated round minimum n_total ≥ 100
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cell-suppression-for-count-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell Suppression for Count Statistics
       
     </span>
   </a>
@@ -2006,10 +2229,104 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#outputs" class="md-nav__link">
+  <a href="#idp-specific-output-controls" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Outputs
+        IDP-Specific Output Controls
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IDP-Specific Output Controls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#brain-volumes-sienax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brain Volumes (SIENAX)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#white-matter-hyperintensities-bianca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        White Matter Hyperintensities (BIANCA)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#freesurfer-idps-1000-scalars" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FreeSurfer IDPs (~1,000 scalars)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tbss-diffusion-idps-450-scalars" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TBSS Diffusion IDPs (450 scalars)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eddy-outlier-count" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eddy Outlier Count
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motion-parameters-fmri" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Motion Parameters (fMRI)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snr-cnr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SNR / CNR
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#log-file-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Log File Controls
       
     </span>
   </a>
@@ -2017,10 +2334,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#commands-executed" class="md-nav__link">
+  <a href="#registration-matrices-and-spatial-data" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Commands Executed
+        Registration Matrices and Spatial Data
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sacro-and-automated-output-checking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SACRO and Automated Output Checking
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-submission-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output Submission Checklist
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
       
     </span>
   </a>
@@ -2047,87 +2397,273 @@
   
 
 
-<h1 id="struc_preproc_part_2sh-freesurfer-reconstruction">struc_preproc_part_2.sh — FreeSurfer Reconstruction<a class="headerlink" href="#struc_preproc_part_2sh-freesurfer-reconstruction" title="Permanent link">&para;</a></h1>
-<p><strong>Location:</strong> <code>BRC_structural_pipeline/scripts/struc_preproc_part_2.sh</code></p>
+<h1 id="disclosure-thresholds-output-controls">Disclosure Thresholds &amp; Output Controls<a class="headerlink" href="#disclosure-thresholds-output-controls" title="Permanent link">&para;</a></h1>
+<p>Disclosure thresholds define the minimum conditions under which statistical outputs from BRAID pipeline analyses may be released from a TRE. They are a core component of <strong>Safe Outputs</strong> (Safe 5 of the DPUK Five Safes framework) and complement cryptographic protections by providing a last line of defence before any aggregate statistic is transmitted to a central aggregator or published.</p>
+<p>This page defines thresholds specific to BRAID neuroimaging IDPs, drawing on DPUK governance, UK Office for National Statistics (ONS) guidance, and the Statistical Disclosure Control (SDC) literature for high-dimensional biomedical data.</p>
 <hr />
-<h2 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h2>
-<p>Runs FreeSurfer full cortical reconstruction (<code>recon-all -all</code>) on the raw T1 image. When a T2-FLAIR image is also provided, it is passed to <code>recon-all</code> via the <code>-FLAIR</code> flag for improved cortical surface delineation. After reconstruction, the automatically created <code>fsaverage</code> symbolic link is removed to keep the output folder clean.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If <code>--dofreesurfer=no</code>, this script exits immediately without performing any work.</p>
-</div>
+<h2 id="general-principles">General Principles<a class="headerlink" href="#general-principles" title="Permanent link">&para;</a></h2>
+<p>The guiding question is: <strong>does the released statistic allow an adversary to infer whether a specific individual is present in the cohort, or to infer a sensitive attribute of an identified individual?</strong></p>
+<p>Three classes of output require different controls:</p>
+<ol>
+<li><strong>Aggregate statistics</strong> (means, medians, variances of IDP distributions across a cohort)</li>
+<li><strong>Model parameters</strong> (regression coefficients, neural network weights trained on IDP features)</li>
+<li><strong>Count statistics</strong> (number of participants meeting a criterion, e.g. WMH &gt; 50 cm³)</li>
+</ol>
 <hr />
-<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>--dofreesurfer</code></td>
-<td>yes/no</td>
-<td>Master flag — must be <code>yes</code> for any processing to occur</td>
-</tr>
-<tr>
-<td><code>--processedt1folder</code></td>
-<td>Path</td>
-<td>Acts as <code>SUBJECTS_DIR</code> for FreeSurfer; reconstruction output goes here</td>
-</tr>
-<tr>
-<td><code>--fsfoldername</code></td>
-<td>String</td>
-<td>Subject name passed to <code>recon-all -s</code>; output is <code>processedt1folder/fsfoldername</code></td>
-</tr>
-<tr>
-<td><code>--t2</code></td>
-<td>yes/no</td>
-<td>Whether a T2 image is available for FLAIR-guided reconstruction</td>
-</tr>
-<tr>
-<td><code>--rawt1folder</code></td>
-<td>Path</td>
-<td>Source directory for <code>T1_orig.nii.gz</code></td>
-</tr>
-<tr>
-<td><code>--rawt2folder</code></td>
-<td>Path</td>
-<td>Source directory for <code>T2_orig.nii.gz</code> (only when <code>--t2=yes</code>)</td>
-</tr>
-<tr>
-<td><code>--logt1folder</code></td>
-<td>Path</td>
-<td>Log file path</td>
-</tr>
-</tbody>
-</table>
+<h2 id="minimum-cohort-size">Minimum Cohort Size<a class="headerlink" href="#minimum-cohort-size" title="Permanent link">&para;</a></h2>
+<h3 id="rule-1-absolute-minimum-n-10-dpuk-ons-standard">Rule 1: Absolute minimum n ≥ 10 (DPUK / ONS standard)<a class="headerlink" href="#rule-1-absolute-minimum-n-10-dpuk-ons-standard" title="Permanent link">&para;</a></h3>
+<p>No aggregate statistic may be released for a (sub)group of fewer than <strong>10 participants</strong>. This is the standard lower bound applied by DPUK data analysts during Safe Outputs review.</p>
+<h3 id="rule-2-recommended-minimum-n-50-for-high-dimensional-idp-data">Rule 2: Recommended minimum n ≥ 50 for high-dimensional IDP data<a class="headerlink" href="#rule-2-recommended-minimum-n-50-for-high-dimensional-idp-data" title="Permanent link">&para;</a></h3>
+<p>For the ~1,000-dimensional BRAID FreeSurfer IDP vector, the ONS minimum of 10 is insufficient. The <strong>effective degrees of freedom</strong> in the IDP space far exceed 10, meaning that with fewer than ~50 participants, individual contributions are easily inferred from the aggregate mean.</p>
+<p>Recommendation: <strong>n ≥ 50 per site</strong> before releasing any IDP summary statistics in a federated context. For diffusion TBSS metrics (450 dimensions), <strong>n ≥ 30</strong> is acceptable.</p>
+<h3 id="rule-3-federated-round-minimum-n_total-100">Rule 3: Federated round minimum n_total ≥ 100<a class="headerlink" href="#rule-3-federated-round-minimum-n_total-100" title="Permanent link">&para;</a></h3>
+<p>In federated learning, at least <strong>100 total participants across all sites</strong> must contribute to a global model update before that update is used to update the global model. Sites with fewer than n_local ≥ 20 participants should be excluded from the federated round.</p>
 <hr />
-<h2 id="outputs">Outputs<a class="headerlink" href="#outputs" title="Permanent link">&para;</a></h2>
+<h2 id="cell-suppression-for-count-statistics">Cell Suppression for Count Statistics<a class="headerlink" href="#cell-suppression-for-count-statistics" title="Permanent link">&para;</a></h2>
+<p>When releasing counts (e.g. number of participants with WMH volume &gt; threshold), apply <strong>primary suppression</strong> (suppress cells with count &lt; 10) and <strong>secondary suppression</strong> (suppress complementary cells to prevent back-calculation).</p>
+<p><strong>Example:</strong> In a cohort of 80 participants, if 7 have WMH &gt; 100 cm³, the count 7 must be suppressed. But if the total is published as 80, the complement (73) is also at risk because the released total allows the suppressed cell to be estimated. Suppress both or round to the nearest 5.</p>
+<hr />
+<h2 id="idp-specific-output-controls">IDP-Specific Output Controls<a class="headerlink" href="#idp-specific-output-controls" title="Permanent link">&para;</a></h2>
+<h3 id="brain-volumes-sienax">Brain Volumes (SIENAX)<a class="headerlink" href="#brain-volumes-sienax" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
 <th>Output</th>
-<th>Description</th>
+<th>Threshold</th>
+<th>Control</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>&lt;processedT1Folder&gt;/FreeSurfer/</code></td>
-<td>Full FreeSurfer subject directory (<code>surf/</code>, <code>mri/</code>, <code>label/</code>, <code>stats/</code> sub-directories)</td>
+<td>Mean total brain volume</td>
+<td>n ≥ 50</td>
+<td>Standard</td>
+</tr>
+<tr>
+<td>Mean normalised GM/WM</td>
+<td>n ≥ 50</td>
+<td>Standard</td>
+</tr>
+<tr>
+<td>VSCALING</td>
+<td>n ≥ 50</td>
+<td>Round to 3 significant figures</td>
+</tr>
+<tr>
+<td>Unnormalised volumes</td>
+<td>n ≥ 100</td>
+<td>Top-code at 99th percentile; add DP noise ε = 1.0</td>
+</tr>
+</tbody>
+</table>
+<p>Unnormalised volumes are more sensitive than normalised because they encode absolute head size, which is more identifying.</p>
+<h3 id="white-matter-hyperintensities-bianca">White Matter Hyperintensities (BIANCA)<a class="headerlink" href="#white-matter-hyperintensities-bianca" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Output</th>
+<th>Threshold</th>
+<th>Control</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mean WMH volume</td>
+<td>n ≥ 30</td>
+<td>Top-code at 95th percentile before computing mean</td>
+</tr>
+<tr>
+<td>WMH count (n with WMH &gt; threshold)</td>
+<td>n ≥ 10</td>
+<td>Primary + secondary suppression</td>
+</tr>
+<tr>
+<td>Distribution (percentiles)</td>
+<td>n ≥ 100</td>
+<td>Release only 25th, 50th, 75th percentiles</td>
+</tr>
+</tbody>
+</table>
+<p>WMH volume distributions in dementia cohorts are heavily right-skewed. An individual with a very large WMH volume (outlier) can shift the mean substantially, making them identifiable. Top-coding at the 95th percentile removes this risk.</p>
+<h3 id="freesurfer-idps-1000-scalars">FreeSurfer IDPs (~1,000 scalars)<a class="headerlink" href="#freesurfer-idps-1000-scalars" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Output</th>
+<th>Threshold</th>
+<th>Control</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Per-ROI mean (any atlas)</td>
+<td>n ≥ 50 per site</td>
+<td>Apply DP noise ε = 1.0 per site contribution</td>
+</tr>
+<tr>
+<td>Full covariance matrix</td>
+<td>n ≥ 200</td>
+<td>Regularise; do not release raw covariance</td>
+</tr>
+<tr>
+<td>Individual IDP row</td>
+<td>Prohibited</td>
+<td>Never release; this is individual-level data</td>
+</tr>
+<tr>
+<td>PCA components of IDP space</td>
+<td>n ≥ 100</td>
+<td>Release only top k components where k &lt;&lt; n</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Covariance matrix risk</p>
+<p>The full covariance matrix of 1,000 FreeSurfer IDPs has ~500,000 entries. Even for large cohorts, releasing the full covariance enables attribute inference (predicting unobserved IDPs from observed ones) and is not safe. Release only regularised, low-rank approximations.</p>
+</div>
+<h3 id="tbss-diffusion-idps-450-scalars">TBSS Diffusion IDPs (450 scalars)<a class="headerlink" href="#tbss-diffusion-idps-450-scalars" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Output</th>
+<th>Threshold</th>
+<th>Control</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Per-tract mean FA/MD</td>
+<td>n ≥ 30 per site</td>
+<td>Standard; DP noise if n &lt; 50</td>
+</tr>
+<tr>
+<td>NODDI metrics (ICVF/ISOVF/ODI)</td>
+<td>n ≥ 50</td>
+<td>DP noise ε = 1.0</td>
+</tr>
+<tr>
+<td>Individual tract profile</td>
+<td>Prohibited</td>
+<td>Individual-level data</td>
+</tr>
+</tbody>
+</table>
+<h3 id="eddy-outlier-count">Eddy Outlier Count<a class="headerlink" href="#eddy-outlier-count" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Output</th>
+<th>Threshold</th>
+<th>Control</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mean outlier count</td>
+<td>n ≥ 20</td>
+<td>Standard</td>
+</tr>
+<tr>
+<td>Individual outlier count</td>
+<td>Prohibited</td>
+<td>Reveals per-subject motion profile</td>
+</tr>
+</tbody>
+</table>
+<h3 id="motion-parameters-fmri">Motion Parameters (fMRI)<a class="headerlink" href="#motion-parameters-fmri" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Output</th>
+<th>Threshold</th>
+<th>Control</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mean framewise displacement</td>
+<td>n ≥ 20</td>
+<td>Standard</td>
+</tr>
+<tr>
+<td>Mean rotation/translation</td>
+<td>n ≥ 20</td>
+<td>Standard</td>
+</tr>
+<tr>
+<td>Individual motion trace</td>
+<td>Prohibited</td>
+<td>6-DOF time series is identifying</td>
+</tr>
+</tbody>
+</table>
+<h3 id="snr-cnr">SNR / CNR<a class="headerlink" href="#snr-cnr" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Output</th>
+<th>Threshold</th>
+<th>Control</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Site mean SNR/CNR</td>
+<td>n ≥ 20</td>
+<td>These reveal scanner characteristics</td>
+</tr>
+<tr>
+<td>Individual SNR/CNR</td>
+<td>n ≥ 20</td>
+<td>Aggregate with other metrics only</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="commands-executed">Commands Executed<a class="headerlink" href="#commands-executed" title="Permanent link">&para;</a></h2>
-<p><strong>T1 only:</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>recon-all<span class="w"> </span>-i<span class="w"> </span>T1_orig.nii.gz<span class="w"> </span>-s<span class="w"> </span>FreeSurfer<span class="w"> </span>-all
-</code></pre></div></p>
-<p><strong>T1 + T2-FLAIR:</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>recon-all<span class="w"> </span>-i<span class="w"> </span>T1_orig.nii.gz<span class="w"> </span>-s<span class="w"> </span>FreeSurfer<span class="w"> </span>-FLAIR<span class="w"> </span>T2_orig.nii.gz<span class="w"> </span>-all
-</code></pre></div></p>
+<h2 id="log-file-controls">Log File Controls<a class="headerlink" href="#log-file-controls" title="Permanent link">&para;</a></h2>
+<p>Log files produced by all BRAID pipeline scripts contain subject identifiers embedded in directory paths (e.g. <code>WD:/data/study/sub-001/analysis</code>). They must be subject to the following controls:</p>
+<ol>
+<li><strong>Never transmitted outside the TRE</strong> under any circumstances</li>
+<li>Log files must be listed as a <strong>prohibited output</strong> in any data sharing agreement</li>
+<li>Automated log scrubbing should remove subject ID patterns before any log archiving system that communicates outside the TRE perimeter</li>
+</ol>
+<hr />
+<h2 id="registration-matrices-and-spatial-data">Registration Matrices and Spatial Data<a class="headerlink" href="#registration-matrices-and-spatial-data" title="Permanent link">&para;</a></h2>
+<p>Registration matrices (<code>T1_to_MNI_linear.mat</code>, <code>T1_to_MNI_nonlin_coeff.nii.gz</code>) and Jacobian maps encode individual brain morphology and are <strong>prohibited from release</strong> under all circumstances. They are essentially a compact representation of the individual's brain shape and constitute biometric data.</p>
+<hr />
+<h2 id="sacro-and-automated-output-checking">SACRO and Automated Output Checking<a class="headerlink" href="#sacro-and-automated-output-checking" title="Permanent link">&para;</a></h2>
+<p>The <strong>SACRO</strong> (Statistical and Automated Release for Output Checking) framework, developed for UK TREs, provides automated checking of outputs against disclosure rules. SACRO checks include:</p>
+<ul>
+<li>Minimum cell counts</li>
+<li>Suppression of near-identifying combinations</li>
+<li>Detection of high-leverage individuals (those who substantially influence aggregate statistics)</li>
+</ul>
+<p>For BRAID federated deployments, SACRO or an equivalent automated output checker should be integrated into the federated aggregation pipeline as the final gate before any statistic leaves the TRE.</p>
+<hr />
+<h2 id="output-submission-checklist">Output Submission Checklist<a class="headerlink" href="#output-submission-checklist" title="Permanent link">&para;</a></h2>
+<p>Before any BRAID-derived statistic is transmitted to a federated aggregator or released as a study output, the following must be confirmed:</p>
+<ul>
+<li>[ ] Cohort size meets minimum threshold for the specific IDP type</li>
+<li>[ ] No individual-level rows are present in any transmitted file</li>
+<li>[ ] Subject identifiers have been removed or stripped from all files (not just pseudonymised)</li>
+<li>[ ] Top-coding has been applied to skewed distributions (WMH, outlier IDPs)</li>
+<li>[ ] DP noise has been applied to site-level contributions where n &lt; 100</li>
+<li>[ ] Log files are excluded from all transmissions</li>
+<li>[ ] Registration matrices and spatial images are excluded</li>
+<li>[ ] SACRO or equivalent automated check has passed</li>
+<li>[ ] A DPUK data analyst (or site-equivalent) has signed off the output (Safe Outputs, Safe 5)</li>
+</ul>
+<hr />
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ul>
+<li>UK Office for National Statistics (2023). <em>Disclosure Control for Administrative Data</em>. ONS Methodology.</li>
+<li>Hundepool, A. et al. (2012). <em>Statistical Disclosure Control</em>. Wiley.</li>
+<li>DPUK Data Provider Handbook (2024). Dementias Platform UK.</li>
+<li>NHS Digital (2023). <em>Data Security and Protection Toolkit</em>.</li>
+<li>SACRO: Statistical Controlled Automated Release Output. UK TRE Community, 2023.</li>
+<li>Domingo-Ferrer, J. &amp; Torra, V. (2001). A quantitative comparison of disclosure control methods for microdata. <em>Confidentiality, Disclosure, and Data Access</em>.</li>
+<li>Wachinger, C. et al. (2015). BrainPrint. <em>NeuroImage</em>, 109, 232–248.</li>
+</ul>
 
 
 
@@ -2163,7 +2699,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../struc-preproc-part1/" class="md-footer__link md-footer__link--prev" aria-label="Previous: struc_preproc_part_1.sh — Stage 1 Dispatcher">
+          <a href="../secure-aggregation/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Secure Aggregation &amp; MPC">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2173,20 +2709,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                struc_preproc_part_1.sh — Stage 1 Dispatcher
+                Secure Aggregation & MPC
               </div>
             </div>
           </a>
         
         
           
-          <a href="../struc-preproc-part3/" class="md-footer__link md-footer__link--next" aria-label="Next: struc_preproc_part_3.sh — FastSurfer + Output Organisation">
+          <a href="../compliance/" class="md-footer__link md-footer__link--next" aria-label="Next: Governance &amp; Compliance">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                struc_preproc_part_3.sh — FastSurfer + Output Organisation
+                Governance & Compliance
               </div>
             </div>
             <div class="md-footer__button md-icon">

@@ -12,13 +12,13 @@
         <meta name="author" content="Ali-Reza Mohammadi-Nejad & Stamatios N Sotiropoulos">
       
       
-        <link rel="canonical" href="https://dare-uk-braid.github.io/BRC_Pipeline/scripts/struc-preproc-part2/">
+        <link rel="canonical" href="https://dare-uk-braid.github.io/BRC_Pipeline/federated/secure-aggregation/">
       
       
-        <link rel="prev" href="../struc-preproc-part1/">
+        <link rel="prev" href="../differential-privacy/">
       
       
-        <link rel="next" href="../struc-preproc-part3/">
+        <link rel="next" href="../thresholds/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>struc_preproc_part_2.sh — FreeSurfer Reconstruction - BRAID Neuroimaging Pipelines</title>
+        <title>Secure Aggregation & MPC - BRAID Neuroimaging Pipelines</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#struc_preproc_part_2sh-freesurfer-reconstruction" class="md-skip">
+        <a href="#secure-aggregation-mpc" class="md-skip">
           Skip to content
         </a>
       
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              struc_preproc_part_2.sh — FreeSurfer Reconstruction
+              Secure Aggregation & MPC
             
           </span>
         </div>
@@ -315,10 +315,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -339,11 +337,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -364,7 +362,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -435,8 +433,6 @@
                 
   
   
-    
-  
   
   
     
@@ -460,15 +456,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../scripts/" class="md-nav__link ">
               
   
   
@@ -492,7 +488,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -509,10 +505,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -530,11 +524,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_2" >
         
           
           <label class="md-nav__link" for="__nav_3_3_2" id="__nav_3_3_2_label" tabindex="0">
@@ -555,7 +549,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -573,7 +567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../struc-preproc/" class="md-nav__link">
+      <a href="../../scripts/struc-preproc/" class="md-nav__link">
         
   
   
@@ -601,7 +595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../struc-preproc-part1/" class="md-nav__link">
+      <a href="../../scripts/struc-preproc-part1/" class="md-nav__link">
         
   
   
@@ -626,37 +620,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    struc_preproc_part_2.sh — FreeSurfer Reconstruction
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../scripts/struc-preproc-part2/" class="md-nav__link">
         
   
   
@@ -672,70 +639,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#purpose" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Purpose
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parameters
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#outputs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Outputs
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#commands-executed" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Commands Executed
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -748,7 +651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../struc-preproc-part3/" class="md-nav__link">
+      <a href="../../scripts/struc-preproc-part3/" class="md-nav__link">
         
   
   
@@ -839,7 +742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../t1-preprocessing/" class="md-nav__link">
+      <a href="../../scripts/t1-preprocessing/" class="md-nav__link">
         
   
   
@@ -867,7 +770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../t2-preprocessing/" class="md-nav__link">
+      <a href="../../scripts/t2-preprocessing/" class="md-nav__link">
         
   
   
@@ -958,7 +861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../t1-sienax/" class="md-nav__link">
+      <a href="../../scripts/t1-sienax/" class="md-nav__link">
         
   
   
@@ -986,7 +889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../t2-bianca/" class="md-nav__link">
+      <a href="../../scripts/t2-bianca/" class="md-nav__link">
         
   
   
@@ -1081,7 +984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../output-organization/" class="md-nav__link">
+      <a href="../../scripts/output-organization/" class="md-nav__link">
         
   
   
@@ -1109,7 +1012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fsl-anat/" class="md-nav__link">
+      <a href="../../scripts/fsl-anat/" class="md-nav__link">
         
   
   
@@ -1137,7 +1040,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../run-preprocessing/" class="md-nav__link">
+      <a href="../../scripts/run-preprocessing/" class="md-nav__link">
         
   
   
@@ -1165,7 +1068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../move-rename/" class="md-nav__link">
+      <a href="../../scripts/move-rename/" class="md-nav__link">
         
   
   
@@ -1707,6 +1610,8 @@
       
   
   
+    
+  
   
   
     
@@ -1737,15 +1642,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../federated/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -1769,7 +1674,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1789,7 +1694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../federated/egress/" class="md-nav__link">
+      <a href="../egress/" class="md-nav__link">
         
   
   
@@ -1817,7 +1722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../federated/membership-attacks/" class="md-nav__link">
+      <a href="../membership-attacks/" class="md-nav__link">
         
   
   
@@ -1845,7 +1750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../federated/differential-privacy/" class="md-nav__link">
+      <a href="../differential-privacy/" class="md-nav__link">
         
   
   
@@ -1870,10 +1775,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../federated/secure-aggregation/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Secure Aggregation & MPC
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1889,6 +1821,114 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-secure-aggregation-is-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Secure Aggregation is Needed
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secure-aggregation-protocol-bonawitz-et-al-2017" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Secure Aggregation Protocol (Bonawitz et al., 2017)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#homomorphic-encryption-he" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Homomorphic Encryption (HE)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secure-multi-party-computation-mpc-for-tbss-and-freesurfer-idps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Secure Multi-Party Computation (MPC) for TBSS and FreeSurfer IDPs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trusted-execution-environments-tees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trusted Execution Environments (TEEs)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#communication-security-for-braid-federated-deployments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Communication Security for BRAID Federated Deployments
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-architecture-for-braid-federated-idp-aggregation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended Architecture for BRAID Federated IDP Aggregation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1901,7 +1941,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../federated/thresholds/" class="md-nav__link">
+      <a href="../thresholds/" class="md-nav__link">
         
   
   
@@ -1929,7 +1969,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../federated/compliance/" class="md-nav__link">
+      <a href="../compliance/" class="md-nav__link">
         
   
   
@@ -1984,10 +2024,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#purpose" class="md-nav__link">
+  <a href="#why-secure-aggregation-is-needed" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Purpose
+        Why Secure Aggregation is Needed
       
     </span>
   </a>
@@ -1995,10 +2035,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
+  <a href="#secure-aggregation-protocol-bonawitz-et-al-2017" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Parameters
+        Secure Aggregation Protocol (Bonawitz et al., 2017)
       
     </span>
   </a>
@@ -2006,10 +2046,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#outputs" class="md-nav__link">
+  <a href="#homomorphic-encryption-he" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Outputs
+        Homomorphic Encryption (HE)
       
     </span>
   </a>
@@ -2017,10 +2057,54 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#commands-executed" class="md-nav__link">
+  <a href="#secure-multi-party-computation-mpc-for-tbss-and-freesurfer-idps" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Commands Executed
+        Secure Multi-Party Computation (MPC) for TBSS and FreeSurfer IDPs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trusted-execution-environments-tees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trusted Execution Environments (TEEs)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#communication-security-for-braid-federated-deployments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Communication Security for BRAID Federated Deployments
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-architecture-for-braid-federated-idp-aggregation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended Architecture for BRAID Federated IDP Aggregation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
       
     </span>
   </a>
@@ -2047,87 +2131,162 @@
   
 
 
-<h1 id="struc_preproc_part_2sh-freesurfer-reconstruction">struc_preproc_part_2.sh — FreeSurfer Reconstruction<a class="headerlink" href="#struc_preproc_part_2sh-freesurfer-reconstruction" title="Permanent link">&para;</a></h1>
-<p><strong>Location:</strong> <code>BRC_structural_pipeline/scripts/struc_preproc_part_2.sh</code></p>
+<h1 id="secure-aggregation-mpc">Secure Aggregation &amp; MPC<a class="headerlink" href="#secure-aggregation-mpc" title="Permanent link">&para;</a></h1>
+<p><strong>Secure aggregation</strong> and <strong>multi-party computation (MPC)</strong> are cryptographic techniques that allow multiple parties (TRE sites) to collaboratively compute a function over their combined data without any party — including the central aggregator — seeing the individual inputs. In federated neuroimaging, these protocols protect individual site-level IDP statistics and model gradients from being observed during transmission and aggregation.</p>
 <hr />
-<h2 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h2>
-<p>Runs FreeSurfer full cortical reconstruction (<code>recon-all -all</code>) on the raw T1 image. When a T2-FLAIR image is also provided, it is passed to <code>recon-all</code> via the <code>-FLAIR</code> flag for improved cortical surface delineation. After reconstruction, the automatically created <code>fsaverage</code> symbolic link is removed to keep the output folder clean.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If <code>--dofreesurfer=no</code>, this script exits immediately without performing any work.</p>
-</div>
+<h2 id="why-secure-aggregation-is-needed">Why Secure Aggregation is Needed<a class="headerlink" href="#why-secure-aggregation-is-needed" title="Permanent link">&para;</a></h2>
+<p>Differential Privacy (see <a href="../differential-privacy/">Differential Privacy</a>) protects the <strong>outputs</strong> of the aggregation — i.e. what the aggregator releases. But it does not protect the <strong>inputs</strong>: if sites transmit their raw local IDP means, gradient vectors, or unprotected model updates, the aggregator (or an adversary who intercepts the transmission) can observe individual site contributions.</p>
+<p>This is particularly important in the BRAID federated context because:</p>
+<ol>
+<li><strong>Small TRE cohorts</strong>: A site with 20 participants has a local IDP mean that differs only slightly from individual values — seeing the local mean is nearly as identifying as seeing the raw data</li>
+<li><strong>Cross-site collusion</strong>: In a federated network where one site is compromised, that site's operator can observe all transmissions it participates in</li>
+<li><strong>Gradient inversion</strong>: Unprotected gradient updates in a federated learning model can be inverted to reconstruct individual BRAID IDP values (Zhu et al., 2019)</li>
+<li><strong>TRE network perimeter</strong>: Even within accredited TRE infrastructure (e.g. DPUK/SeRP), transmissions between sites pass over networks that may not be fully under each TRE's control</li>
+</ol>
 <hr />
-<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
+<h2 id="secure-aggregation-protocol-bonawitz-et-al-2017">Secure Aggregation Protocol (Bonawitz et al., 2017)<a class="headerlink" href="#secure-aggregation-protocol-bonawitz-et-al-2017" title="Permanent link">&para;</a></h2>
+<p>The most widely deployed secure aggregation protocol for federated learning was developed by Bonawitz et al. at Google. It guarantees that the central server learns only the <strong>sum</strong> of site contributions, provided that a threshold number of sites participate and no coalition of sites plus server exceeds a collusion bound.</p>
+<p><strong>Protocol overview:</strong></p>
+<ol>
+<li><strong>Key agreement</strong>: Sites establish pairwise secret keys using Diffie-Hellman key exchange</li>
+<li><strong>Masking</strong>: Each site <em>i</em> adds a pseudorandom mask s_{ij} (derived from the shared key with site j) to its local IDP update u_i, so the transmitted value is u_i + Σ_j s_{ij}</li>
+<li><strong>Cancellation</strong>: The masks are designed to cancel pairwise: site i adds +s_{ij} and site j adds -s_{ij}. When all site transmissions are summed, the masks cancel and the server recovers Σ_i u_i exactly</li>
+<li><strong>Dropout handling</strong>: If some sites drop out mid-round, a secret sharing scheme (Shamir, 1979) is used to reconstruct missing masks</li>
+</ol>
+<p>The server <strong>never sees</strong> any individual u_i — only the aggregate sum.</p>
+<p><strong>Applicability to BRAID:</strong></p>
+<p>This protocol is directly applicable to federated IDP aggregation. Each site computes its local IDP statistics (mean, count), adds pairwise masks, and transmits the masked vector. The aggregator recovers the sum and divides by total N to obtain the global IDP mean — without observing any site's individual contribution.</p>
+<hr />
+<h2 id="homomorphic-encryption-he">Homomorphic Encryption (HE)<a class="headerlink" href="#homomorphic-encryption-he" title="Permanent link">&para;</a></h2>
+<p><strong>Homomorphic Encryption</strong> allows computation on ciphertext such that decrypting the result yields the same answer as performing the computation on plaintext. In federated neuroimaging, partially homomorphic encryption (PHE) supports the aggregation of site IDP means without decrypting intermediate values.</p>
+<p><strong>How it works for BRAID federated aggregation:</strong></p>
+<ol>
+<li>The central aggregator generates a public/private key pair and distributes the public key to all sites</li>
+<li>Each site encrypts its local IDP summary statistics under the public key: Enc(u_i)</li>
+<li>Each site transmits Enc(u_i) to the aggregator</li>
+<li>The aggregator computes the encrypted sum: Enc(Σ u_i) = Π Enc(u_i) (using additive homomorphism)</li>
+<li>The aggregator decrypts with the private key to obtain Σ u_i</li>
+</ol>
+<p><strong>The aggregator cannot observe individual u_i without factoring the encryption.</strong></p>
+<p><strong>Relevant schemes:</strong></p>
 <table>
 <thead>
 <tr>
-<th>Parameter</th>
+<th>Scheme</th>
 <th>Type</th>
-<th>Description</th>
+<th>Speed</th>
+<th>Use Case</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>--dofreesurfer</code></td>
-<td>yes/no</td>
-<td>Master flag — must be <code>yes</code> for any processing to occur</td>
+<td>Paillier (1999)</td>
+<td>PHE (additive)</td>
+<td>Fast</td>
+<td>IDP mean aggregation</td>
 </tr>
 <tr>
-<td><code>--processedt1folder</code></td>
-<td>Path</td>
-<td>Acts as <code>SUBJECTS_DIR</code> for FreeSurfer; reconstruction output goes here</td>
+<td>BFV / BGV</td>
+<td>FHE (fully homomorphic)</td>
+<td>Slow</td>
+<td>Complex model aggregation</td>
 </tr>
 <tr>
-<td><code>--fsfoldername</code></td>
-<td>String</td>
-<td>Subject name passed to <code>recon-all -s</code>; output is <code>processedt1folder/fsfoldername</code></td>
-</tr>
-<tr>
-<td><code>--t2</code></td>
-<td>yes/no</td>
-<td>Whether a T2 image is available for FLAIR-guided reconstruction</td>
-</tr>
-<tr>
-<td><code>--rawt1folder</code></td>
-<td>Path</td>
-<td>Source directory for <code>T1_orig.nii.gz</code></td>
-</tr>
-<tr>
-<td><code>--rawt2folder</code></td>
-<td>Path</td>
-<td>Source directory for <code>T2_orig.nii.gz</code> (only when <code>--t2=yes</code>)</td>
-</tr>
-<tr>
-<td><code>--logt1folder</code></td>
-<td>Path</td>
-<td>Log file path</td>
+<td>CKKS</td>
+<td>Approx. FHE</td>
+<td>Moderate</td>
+<td>Neural network training</td>
 </tr>
 </tbody>
 </table>
+<p>For BRAID IDP mean aggregation (addition only), <strong>Paillier encryption</strong> is sufficient and computationally practical. For federated neural network training on IDP features, <strong>CKKS</strong> (which supports approximate arithmetic on real numbers) is preferred.</p>
 <hr />
-<h2 id="outputs">Outputs<a class="headerlink" href="#outputs" title="Permanent link">&para;</a></h2>
+<h2 id="secure-multi-party-computation-mpc-for-tbss-and-freesurfer-idps">Secure Multi-Party Computation (MPC) for TBSS and FreeSurfer IDPs<a class="headerlink" href="#secure-multi-party-computation-mpc-for-tbss-and-freesurfer-idps" title="Permanent link">&para;</a></h2>
+<p>For computing statistics over the high-dimensional BRAID IDP space (1,000+ dimensions), standard MPC frameworks applicable to federated neuroimaging include:</p>
+<ul>
+<li><strong>SCALE-MAMBA / MOTION</strong>: General-purpose MPC frameworks supporting arithmetic over real-valued inputs</li>
+<li><strong>SecureNN / FALCON</strong>: Neural network inference over secret shares</li>
+<li><strong>PySyft with CrypTen</strong>: Python-friendly MPC for PyTorch-based federated models</li>
+</ul>
+<p><strong>SACRO and SACRO-ML</strong>, the output checking tools developed for UK TRE environments, provide a layer of Safe Outputs enforcement that complements MPC by checking that no individual-level data is present in what the aggregator releases, even after secure aggregation.</p>
+<hr />
+<h2 id="trusted-execution-environments-tees">Trusted Execution Environments (TEEs)<a class="headerlink" href="#trusted-execution-environments-tees" title="Permanent link">&para;</a></h2>
+<p>A complementary approach to cryptographic MPC is to perform aggregation within a <strong>Trusted Execution Environment</strong> (TEE), such as Intel SGX or AMD SEV. TEEs provide hardware-enforced isolation: code running inside the enclave cannot be observed or tampered with even by a privileged OS or cloud provider.</p>
+<p>In a federated BRAID deployment with TEEs:</p>
+<ol>
+<li>The aggregator runs inside a TEE enclave</li>
+<li>Sites verify the enclave's integrity via remote attestation before sending their local statistics</li>
+<li>The enclave performs the aggregation and releases only the intended output (e.g. a DP-protected global IDP mean)</li>
+</ol>
+<p>TEEs have been used in medical imaging federated learning (Kaissis et al., 2021) and are increasingly supported by major cloud providers (Azure Confidential Computing, AWS Nitro Enclaves).</p>
+<hr />
+<h2 id="communication-security-for-braid-federated-deployments">Communication Security for BRAID Federated Deployments<a class="headerlink" href="#communication-security-for-braid-federated-deployments" title="Permanent link">&para;</a></h2>
+<p>Beyond secure aggregation, the communication channel between TRE sites and the aggregator must be secured:</p>
 <table>
 <thead>
 <tr>
-<th>Output</th>
-<th>Description</th>
+<th>Requirement</th>
+<th>Implementation</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>&lt;processedT1Folder&gt;/FreeSurfer/</code></td>
-<td>Full FreeSurfer subject directory (<code>surf/</code>, <code>mri/</code>, <code>label/</code>, <code>stats/</code> sub-directories)</td>
+<td>Encryption in transit</td>
+<td>TLS 1.3 minimum for all federated communications</td>
+</tr>
+<tr>
+<td>Mutual authentication</td>
+<td>Client certificates (mTLS) for site-to-aggregator connections</td>
+</tr>
+<tr>
+<td>No logging of payloads</td>
+<td>Aggregator infrastructure must not log decrypted site contributions</td>
+</tr>
+<tr>
+<td>Network isolation</td>
+<td>Aggregator endpoint accessible only to approved TRE IP ranges</td>
+</tr>
+<tr>
+<td>Audit trail</td>
+<td>All federated rounds logged with hashes of contributions (but not content)</td>
 </tr>
 </tbody>
 </table>
+<p>Under the DPUK/SeRP infrastructure, inter-site communication must comply with ISO 27001 information security standards. Any federated aggregation service should be accredited as part of the overall TRE system.</p>
 <hr />
-<h2 id="commands-executed">Commands Executed<a class="headerlink" href="#commands-executed" title="Permanent link">&para;</a></h2>
-<p><strong>T1 only:</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>recon-all<span class="w"> </span>-i<span class="w"> </span>T1_orig.nii.gz<span class="w"> </span>-s<span class="w"> </span>FreeSurfer<span class="w"> </span>-all
-</code></pre></div></p>
-<p><strong>T1 + T2-FLAIR:</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>recon-all<span class="w"> </span>-i<span class="w"> </span>T1_orig.nii.gz<span class="w"> </span>-s<span class="w"> </span>FreeSurfer<span class="w"> </span>-FLAIR<span class="w"> </span>T2_orig.nii.gz<span class="w"> </span>-all
-</code></pre></div></p>
+<h2 id="recommended-architecture-for-braid-federated-idp-aggregation">Recommended Architecture for BRAID Federated IDP Aggregation<a class="headerlink" href="#recommended-architecture-for-braid-federated-idp-aggregation" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>┌─────────────────────────────────────────────────────────┐
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>│  TRE Site A (DPUK SeRP)              TRE Site B          │
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>│  ┌──────────────────┐                ┌───────────────┐   │
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│  │ BRAID Pipelines  │                │ BRAID Pipelines│  │
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│  │ → IDPs.txt       │                │ → IDPs.txt    │   │
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>│  │ → Local mean u_A │                │ → Local mean  │   │
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>│  │ + DP noise       │                │ + DP noise    │   │
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>│  │ + SecAgg mask    │                │ + SecAgg mask │   │
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>│  └────────┬─────────┘                └──────┬────────┘   │
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>│           │  Enc(u_A + mask_A)              │             │
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>└───────────┼─────────────────────────────────┼────────────┘
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>            │                                 │
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>            ▼                                 ▼
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>     ┌──────────────────────────────────────────────────┐
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>     │  Central Aggregator (TEE or MPC environment)     │
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>     │  Receives: Enc(u_A + mask), Enc(u_B + mask)     │
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>     │  Computes: Σ Enc(u_i) → decrypts → Σ u_i / N  │
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>     │  Applies: SACRO output check                     │
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>     │  Releases: DP-protected global IDP statistics    │
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>     └──────────────────────────────────────────────────┘
+</code></pre></div>
+<hr />
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Bonawitz, K. et al. (2017). Practical secure aggregation for privacy-preserving machine learning. <em>ACM CCS 2017</em>.</li>
+<li>Paillier, P. (1999). Public-key cryptosystems based on composite degree residuosity classes. <em>EUROCRYPT 1999</em>.</li>
+<li>Zhu, L. et al. (2019). Deep leakage from gradients. <em>NeurIPS 2019</em>.</li>
+<li>Kaissis, G. et al. (2021). End-to-end privacy preserving deep learning on multi-institutional medical imaging. <em>Nature Machine Intelligence</em>, 3, 473–484.</li>
+<li>Cheng, K. et al. (2021). FedMed: A federated learning framework for language-image medical data. <em>ACM MM 2021</em>.</li>
+<li>Rieke, N. et al. (2020). The future of digital health with federated learning. <em>npj Digital Medicine</em>, 3, 119.</li>
+<li>SACRO: Statistical Controlled Automated Release Output. UK TRE Community, 2023.</li>
+</ul>
 
 
 
@@ -2163,7 +2322,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../struc-preproc-part1/" class="md-footer__link md-footer__link--prev" aria-label="Previous: struc_preproc_part_1.sh — Stage 1 Dispatcher">
+          <a href="../differential-privacy/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Differential Privacy">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2173,20 +2332,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                struc_preproc_part_1.sh — Stage 1 Dispatcher
+                Differential Privacy
               </div>
             </div>
           </a>
         
         
           
-          <a href="../struc-preproc-part3/" class="md-footer__link md-footer__link--next" aria-label="Next: struc_preproc_part_3.sh — FastSurfer + Output Organisation">
+          <a href="../thresholds/" class="md-footer__link md-footer__link--next" aria-label="Next: Disclosure Thresholds">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                struc_preproc_part_3.sh — FastSurfer + Output Organisation
+                Disclosure Thresholds
               </div>
             </div>
             <div class="md-footer__button md-icon">

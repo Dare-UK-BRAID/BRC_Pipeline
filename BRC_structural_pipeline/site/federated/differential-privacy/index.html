@@ -12,13 +12,13 @@
         <meta name="author" content="Ali-Reza Mohammadi-Nejad & Stamatios N Sotiropoulos">
       
       
-        <link rel="canonical" href="https://dare-uk-braid.github.io/BRC_Pipeline/scripts/struc-preproc-part2/">
+        <link rel="canonical" href="https://dare-uk-braid.github.io/BRC_Pipeline/federated/differential-privacy/">
       
       
-        <link rel="prev" href="../struc-preproc-part1/">
+        <link rel="prev" href="../membership-attacks/">
       
       
-        <link rel="next" href="../struc-preproc-part3/">
+        <link rel="next" href="../secure-aggregation/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>struc_preproc_part_2.sh — FreeSurfer Reconstruction - BRAID Neuroimaging Pipelines</title>
+        <title>Differential Privacy - BRAID Neuroimaging Pipelines</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#struc_preproc_part_2sh-freesurfer-reconstruction" class="md-skip">
+        <a href="#differential-privacy" class="md-skip">
           Skip to content
         </a>
       
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              struc_preproc_part_2.sh — FreeSurfer Reconstruction
+              Differential Privacy
             
           </span>
         </div>
@@ -315,10 +315,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -339,11 +337,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -364,7 +362,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -435,8 +433,6 @@
                 
   
   
-    
-  
   
   
     
@@ -460,15 +456,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../scripts/" class="md-nav__link ">
               
   
   
@@ -492,7 +488,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -509,10 +505,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -530,11 +524,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_2" >
         
           
           <label class="md-nav__link" for="__nav_3_3_2" id="__nav_3_3_2_label" tabindex="0">
@@ -555,7 +549,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -573,7 +567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../struc-preproc/" class="md-nav__link">
+      <a href="../../scripts/struc-preproc/" class="md-nav__link">
         
   
   
@@ -601,7 +595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../struc-preproc-part1/" class="md-nav__link">
+      <a href="../../scripts/struc-preproc-part1/" class="md-nav__link">
         
   
   
@@ -626,37 +620,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    struc_preproc_part_2.sh — FreeSurfer Reconstruction
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../scripts/struc-preproc-part2/" class="md-nav__link">
         
   
   
@@ -672,70 +639,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#purpose" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Purpose
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parameters
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#outputs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Outputs
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#commands-executed" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Commands Executed
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -748,7 +651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../struc-preproc-part3/" class="md-nav__link">
+      <a href="../../scripts/struc-preproc-part3/" class="md-nav__link">
         
   
   
@@ -839,7 +742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../t1-preprocessing/" class="md-nav__link">
+      <a href="../../scripts/t1-preprocessing/" class="md-nav__link">
         
   
   
@@ -867,7 +770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../t2-preprocessing/" class="md-nav__link">
+      <a href="../../scripts/t2-preprocessing/" class="md-nav__link">
         
   
   
@@ -958,7 +861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../t1-sienax/" class="md-nav__link">
+      <a href="../../scripts/t1-sienax/" class="md-nav__link">
         
   
   
@@ -986,7 +889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../t2-bianca/" class="md-nav__link">
+      <a href="../../scripts/t2-bianca/" class="md-nav__link">
         
   
   
@@ -1081,7 +984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../output-organization/" class="md-nav__link">
+      <a href="../../scripts/output-organization/" class="md-nav__link">
         
   
   
@@ -1109,7 +1012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fsl-anat/" class="md-nav__link">
+      <a href="../../scripts/fsl-anat/" class="md-nav__link">
         
   
   
@@ -1137,7 +1040,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../run-preprocessing/" class="md-nav__link">
+      <a href="../../scripts/run-preprocessing/" class="md-nav__link">
         
   
   
@@ -1165,7 +1068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../move-rename/" class="md-nav__link">
+      <a href="../../scripts/move-rename/" class="md-nav__link">
         
   
   
@@ -1707,6 +1610,8 @@
       
   
   
+    
+  
   
   
     
@@ -1737,15 +1642,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../federated/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -1769,7 +1674,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1789,7 +1694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../federated/egress/" class="md-nav__link">
+      <a href="../egress/" class="md-nav__link">
         
   
   
@@ -1817,7 +1722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../federated/membership-attacks/" class="md-nav__link">
+      <a href="../membership-attacks/" class="md-nav__link">
         
   
   
@@ -1842,10 +1747,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../federated/differential-privacy/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Differential Privacy
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1861,6 +1793,192 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-standard-de-identification-is-insufficient" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Standard De-identification Is Insufficient
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Concepts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#privacy-budget" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Privacy Budget (ε)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensitivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sensitivity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gaussian-vs-laplace-mechanism" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gaussian vs. Laplace Mechanism
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applying-dp-to-braid-idp-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Applying DP to BRAID IDP Outputs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Applying DP to BRAID IDP Outputs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-define-the-sensitivity-of-each-idp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Define the Sensitivity of Each IDP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-aggregate-local-statistics-within-the-tre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Aggregate Local Statistics Within the TRE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-noise-calibration-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Noise Calibration Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-privacy-composition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Privacy Composition
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#federated-learning-dp-sgd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Federated Learning: DP-SGD
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations-of-dp-in-neuroimaging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations of DP in Neuroimaging
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-dp-configuration-for-braid-federated-deployments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended DP Configuration for BRAID Federated Deployments
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1873,7 +1991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../federated/secure-aggregation/" class="md-nav__link">
+      <a href="../secure-aggregation/" class="md-nav__link">
         
   
   
@@ -1901,7 +2019,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../federated/thresholds/" class="md-nav__link">
+      <a href="../thresholds/" class="md-nav__link">
         
   
   
@@ -1929,7 +2047,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../federated/compliance/" class="md-nav__link">
+      <a href="../compliance/" class="md-nav__link">
         
   
   
@@ -1984,10 +2102,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#purpose" class="md-nav__link">
+  <a href="#why-standard-de-identification-is-insufficient" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Purpose
+        Why Standard De-identification Is Insufficient
       
     </span>
   </a>
@@ -1995,10 +2113,121 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
+  <a href="#key-concepts" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Parameters
+        Key Concepts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#privacy-budget" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Privacy Budget (ε)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensitivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sensitivity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gaussian-vs-laplace-mechanism" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gaussian vs. Laplace Mechanism
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applying-dp-to-braid-idp-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Applying DP to BRAID IDP Outputs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Applying DP to BRAID IDP Outputs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-define-the-sensitivity-of-each-idp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Define the Sensitivity of Each IDP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-aggregate-local-statistics-within-the-tre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Aggregate Local Statistics Within the TRE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-noise-calibration-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Noise Calibration Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-privacy-composition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Privacy Composition
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#federated-learning-dp-sgd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Federated Learning: DP-SGD
       
     </span>
   </a>
@@ -2006,10 +2235,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#outputs" class="md-nav__link">
+  <a href="#limitations-of-dp-in-neuroimaging" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Outputs
+        Limitations of DP in Neuroimaging
       
     </span>
   </a>
@@ -2017,10 +2246,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#commands-executed" class="md-nav__link">
+  <a href="#recommended-dp-configuration-for-braid-federated-deployments" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Commands Executed
+        Recommended DP Configuration for BRAID Federated Deployments
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
       
     </span>
   </a>
@@ -2047,87 +2287,221 @@
   
 
 
-<h1 id="struc_preproc_part_2sh-freesurfer-reconstruction">struc_preproc_part_2.sh — FreeSurfer Reconstruction<a class="headerlink" href="#struc_preproc_part_2sh-freesurfer-reconstruction" title="Permanent link">&para;</a></h1>
-<p><strong>Location:</strong> <code>BRC_structural_pipeline/scripts/struc_preproc_part_2.sh</code></p>
+<h1 id="differential-privacy">Differential Privacy<a class="headerlink" href="#differential-privacy" title="Permanent link">&para;</a></h1>
+<p><strong>Differential Privacy (DP)</strong> provides a mathematically rigorous framework for bounding the amount of information about any individual participant that can be inferred from the outputs of a computation. Formally, a randomised mechanism M satisfies (ε, δ)-DP if for all pairs of adjacent datasets D and D' (differing in one participant's record), and for all possible outputs S:</p>
+<p>$$P[M(D) \in S] \leq e^\varepsilon \cdot P[M(D') \in S] + \delta$$</p>
+<p>For neuroimaging IDP data, DP provides the most principled defence against the membership inference and re-identification attacks described in <a href="../membership-attacks/">Membership Inference Attacks</a>. This page describes how DP noise should be calibrated and applied to BRAID pipeline outputs.</p>
 <hr />
-<h2 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h2>
-<p>Runs FreeSurfer full cortical reconstruction (<code>recon-all -all</code>) on the raw T1 image. When a T2-FLAIR image is also provided, it is passed to <code>recon-all</code> via the <code>-FLAIR</code> flag for improved cortical surface delineation. After reconstruction, the automatically created <code>fsaverage</code> symbolic link is removed to keep the output folder clean.</p>
+<h2 id="why-standard-de-identification-is-insufficient">Why Standard De-identification Is Insufficient<a class="headerlink" href="#why-standard-de-identification-is-insufficient" title="Permanent link">&para;</a></h2>
+<p>The current BRAID IDP pipeline strips direct identifiers (names, NHS numbers) through the DPUK Safe Data (Safe 4) process, and subject IDs in <code>IDPs.txt</code> are pseudonyms. However, pseudo-anonymisation does not satisfy DP and does not protect against:</p>
+<ul>
+<li>Re-identification through the <strong>neuroanatomical fingerprint</strong> (1,000+ FreeSurfer IDPs)</li>
+<li>Membership inference from <strong>aggregate IDP statistics</strong></li>
+<li>Reconstruction via <strong>gradient leakage</strong> in federated learning</li>
+</ul>
+<p>DP provides a formal guarantee that survives these attacks by bounding the per-individual contribution to any output.</p>
+<hr />
+<h2 id="key-concepts">Key Concepts<a class="headerlink" href="#key-concepts" title="Permanent link">&para;</a></h2>
+<h3 id="privacy-budget">Privacy Budget (ε)<a class="headerlink" href="#privacy-budget" title="Permanent link">&para;</a></h3>
+<p>The parameter ε controls the <strong>privacy-utility trade-off</strong>:</p>
+<ul>
+<li><strong>ε = 0</strong>: Perfect privacy (the output reveals nothing). Utility is zero.</li>
+<li><strong>ε &lt; 1</strong>: Strong privacy. Recommended for sensitive health data.</li>
+<li><strong>1 ≤ ε ≤ 10</strong>: Moderate privacy. Common in practice for aggregate statistics.</li>
+<li><strong>ε &gt; 10</strong>: Weak privacy. Typically insufficient for special category health data.</li>
+</ul>
+<p>For neuroimaging IDPs which are special category data under UK GDPR, an <strong>ε ≤ 1.0</strong> is recommended for individual-level contributions to federated aggregation.</p>
+<h3 id="sensitivity">Sensitivity<a class="headerlink" href="#sensitivity" title="Permanent link">&para;</a></h3>
+<p>The <strong>sensitivity (Δf)</strong> of a function f is the maximum change in f's output when any single participant is added or removed from the dataset. Sensitivity determines how much noise must be added.</p>
+<p>For the BRAID IDP pipeline, sensitivity must be computed or bounded for each IDP individually, because the value ranges differ by many orders of magnitude (e.g. WMH volume in mm³ vs. hippocampal thickness in mm).</p>
+<h3 id="gaussian-vs-laplace-mechanism">Gaussian vs. Laplace Mechanism<a class="headerlink" href="#gaussian-vs-laplace-mechanism" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Laplace mechanism</strong>: Adds Laplace noise with scale λ = Δf/ε. Satisfies pure ε-DP. Preferred when δ = 0 is required.</li>
+<li><strong>Gaussian mechanism</strong>: Adds Gaussian noise with σ = Δf·√(2 ln(1.25/δ))/ε. Satisfies (ε, δ)-DP. More practical for high-dimensional outputs; allows composition over many queries with tighter bounds.</li>
+</ul>
+<p>For the ~1,000-dimensional IDP vector produced per site, the <strong>Gaussian mechanism</strong> is preferred because it allows better composition when multiple queries are answered.</p>
+<hr />
+<h2 id="applying-dp-to-braid-idp-outputs">Applying DP to BRAID IDP Outputs<a class="headerlink" href="#applying-dp-to-braid-idp-outputs" title="Permanent link">&para;</a></h2>
+<h3 id="step-1-define-the-sensitivity-of-each-idp">Step 1: Define the Sensitivity of Each IDP<a class="headerlink" href="#step-1-define-the-sensitivity-of-each-idp" title="Permanent link">&para;</a></h3>
+<p>Sensitivity must be bounded based on the plausible biological range of each measure. The following table gives approximate ranges and sensitivities for key BRAID IDPs:</p>
+<table>
+<thead>
+<tr>
+<th>IDP</th>
+<th>Biological Range</th>
+<th>Recommended Sensitivity (Δf)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Total brain volume (SIENAX)</td>
+<td>800,000 – 1,600,000 mm³</td>
+<td>800,000 mm³</td>
+</tr>
+<tr>
+<td>WMH volume (BIANCA)</td>
+<td>0 – 200,000 mm³</td>
+<td>200,000 mm³</td>
+</tr>
+<tr>
+<td>Hippocampal volume (per hemisphere)</td>
+<td>1,500 – 5,000 mm³</td>
+<td>3,500 mm³</td>
+</tr>
+<tr>
+<td>Cortical thickness (per ROI)</td>
+<td>1.0 – 5.0 mm</td>
+<td>4.0 mm</td>
+</tr>
+<tr>
+<td>FA (TBSS per JHU ROI)</td>
+<td>0.0 – 1.0</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>MD (TBSS per JHU ROI)</td>
+<td>0.0 – 3.0 × 10⁻³ mm²/s</td>
+<td>3.0 × 10⁻³</td>
+</tr>
+<tr>
+<td>ICVF (NODDI)</td>
+<td>0.0 – 1.0</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>SNR reciprocal</td>
+<td>0.0 – 1.0</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Eddy outlier count</td>
+<td>0 – 500</td>
+<td>500</td>
+</tr>
+</tbody>
+</table>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If <code>--dofreesurfer=no</code>, this script exits immediately without performing any work.</p>
+<p class="admonition-title">Sensitivity clamping</p>
+<p>Before applying DP noise, clamp each IDP value to its expected biological range. Outliers outside the range may indicate preprocessing failure and should be set to NaN. Clamping also bounds sensitivity for free.</p>
+</div>
+<h3 id="step-2-aggregate-local-statistics-within-the-tre">Step 2: Aggregate Local Statistics Within the TRE<a class="headerlink" href="#step-2-aggregate-local-statistics-within-the-tre" title="Permanent link">&para;</a></h3>
+<p>Compute within-TRE aggregate statistics (mean, variance, count) <strong>before</strong> applying DP noise. The DP mechanism is applied to these local aggregates, not to individual IDP rows.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">def</span><span class="w"> </span><span class="nf">dp_mean</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">sensitivity</span><span class="p">,</span> <span class="n">epsilon</span><span class="p">,</span> <span class="n">delta</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">):</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="sd">    Compute DP mean using the Gaussian mechanism.</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="sd">    Parameters:</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="sd">        values: array of IDP values (clamped to biological range)</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="sd">        sensitivity: per-record sensitivity (= range / n for mean)</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="sd">        epsilon: privacy budget</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="sd">        delta: DP delta parameter</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="n">true_mean</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    <span class="c1"># Sensitivity of mean is range / n (each record shifts mean by at most range/n)</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    <span class="n">mean_sensitivity</span> <span class="o">=</span> <span class="n">sensitivity</span> <span class="o">/</span> <span class="n">n</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    <span class="c1"># Gaussian noise scale</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    <span class="n">sigma</span> <span class="o">=</span> <span class="n">mean_sensitivity</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mf">1.25</span> <span class="o">/</span> <span class="n">delta</span><span class="p">))</span> <span class="o">/</span> <span class="n">epsilon</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    <span class="n">noise</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">sigma</span><span class="p">)</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    <span class="k">return</span> <span class="n">true_mean</span> <span class="o">+</span> <span class="n">noise</span>
+</code></pre></div>
+<h3 id="step-3-noise-calibration-example">Step 3: Noise Calibration Example<a class="headerlink" href="#step-3-noise-calibration-example" title="Permanent link">&para;</a></h3>
+<p>For hippocampal volume (sensitivity = 3,500 mm³) with n = 100 participants and ε = 1.0, δ = 10⁻⁵:</p>
+<ul>
+<li>Mean sensitivity = 3,500 / 100 = 35 mm³</li>
+<li>σ = 35 × √(2 × ln(1.25/10⁻⁵)) / 1.0 ≈ 35 × √(2 × 11.45) / 1.0 ≈ 35 × 4.78 ≈ <strong>167 mm³</strong></li>
+</ul>
+<p>A true hippocampal mean of ~3,000 mm³ with noise σ = 167 mm³ (5.6% noise) is acceptable for most neuroscience applications. With n = 30, σ increases to ~559 mm³ (18.6% noise), which is likely too high for meaningful federated analysis — reinforcing the minimum cohort size requirement.</p>
+<h3 id="step-4-privacy-composition">Step 4: Privacy Composition<a class="headerlink" href="#step-4-privacy-composition" title="Permanent link">&para;</a></h3>
+<p>When multiple IDP statistics are released in the same federated round, the total privacy budget consumed is the <strong>composition</strong> of individual budgets. Under basic composition, releasing k statistics each with budget ε costs k·ε total. For ~1,000 IDPs, this becomes prohibitive.</p>
+<p><strong>Advanced composition</strong> (Kairouz et al., 2015) provides tighter bounds: releasing k mechanisms each with (ε, δ) costs approximately (ε√(2k log(1/δ')), k·δ + δ') for any δ' &gt; 0.</p>
+<p><strong>Rényi Differential Privacy (RDP)</strong> (Mironov, 2017) provides even tighter composition and is the recommended framework for practical implementation (e.g. via the <code>autodp</code> or <code>opacus</code> Python libraries).</p>
+<hr />
+<h2 id="federated-learning-dp-sgd">Federated Learning: DP-SGD<a class="headerlink" href="#federated-learning-dp-sgd" title="Permanent link">&para;</a></h2>
+<p>If BRAID IDPs are used as training features for a federated machine learning model, <strong>DP-SGD</strong> (Abadi et al., 2016) should be applied:</p>
+<ol>
+<li><strong>Clip per-sample gradients</strong> to L2 norm ≤ C (typically C = 1.0)</li>
+<li><strong>Add Gaussian noise</strong> with scale σ·C to the sum of gradients before aggregation</li>
+<li><strong>Track the privacy budget</strong> using moments accountant or RDP accounting</li>
+</ol>
+<p>The noise multiplier σ should be set to achieve a target ε ≤ 1.0 over the planned number of training rounds and the expected number of participants per site.</p>
+<hr />
+<h2 id="limitations-of-dp-in-neuroimaging">Limitations of DP in Neuroimaging<a class="headerlink" href="#limitations-of-dp-in-neuroimaging" title="Permanent link">&para;</a></h2>
+<p>DP provides formal guarantees, but several practical challenges arise in neuroimaging:</p>
+<ul>
+<li><strong>High sensitivity for rare phenotypes</strong>: Extreme WMH volumes or very small hippocampi require large noise additions that may obscure clinically meaningful variation</li>
+<li><strong>Correlated features</strong>: The 1,000+ FreeSurfer IDPs are highly correlated (e.g. all cortical thickness measures within a hemisphere), so the effective privacy loss from releasing all of them is less than the worst-case composition bound suggests, but also less than a simple sum</li>
+<li><strong>Small site cohorts</strong>: Many TREs in a federated neuroimaging network may have &lt;50 participants. Small n dramatically increases the noise required for a given ε</li>
+<li><strong>Repeated queries</strong>: Federated learning involves many rounds of gradient aggregation. Each round consumes privacy budget. The total training budget must be planned in advance</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">DP does not protect against all attacks</p>
+<p>DP bounds the information leaked about any single individual in the aggregate output, but it does not prevent an adversary from learning general population statistics — which is the intended purpose of the analysis. DP noise also does not protect against compromised aggregators or man-in-the-middle attacks during transmission. Secure aggregation (see <a href="../secure-aggregation/">Secure Aggregation &amp; MPC</a>) is needed to address those threats.</p>
 </div>
 <hr />
-<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
+<h2 id="recommended-dp-configuration-for-braid-federated-deployments">Recommended DP Configuration for BRAID Federated Deployments<a class="headerlink" href="#recommended-dp-configuration-for-braid-federated-deployments" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
+<th>Setting</th>
+<th>Recommended Value</th>
+<th>Rationale</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>--dofreesurfer</code></td>
-<td>yes/no</td>
-<td>Master flag — must be <code>yes</code> for any processing to occur</td>
+<td>Privacy budget ε</td>
+<td>≤ 1.0 per federated round</td>
+<td>Strong privacy for special category health data</td>
 </tr>
 <tr>
-<td><code>--processedt1folder</code></td>
-<td>Path</td>
-<td>Acts as <code>SUBJECTS_DIR</code> for FreeSurfer; reconstruction output goes here</td>
+<td>δ</td>
+<td>≤ 1/n² (where n = min site cohort)</td>
+<td>Standard DP convention</td>
 </tr>
 <tr>
-<td><code>--fsfoldername</code></td>
-<td>String</td>
-<td>Subject name passed to <code>recon-all -s</code>; output is <code>processedt1folder/fsfoldername</code></td>
+<td>Noise mechanism</td>
+<td>Gaussian (RDP accountant)</td>
+<td>Better composition for high-dimensional outputs</td>
 </tr>
 <tr>
-<td><code>--t2</code></td>
-<td>yes/no</td>
-<td>Whether a T2 image is available for FLAIR-guided reconstruction</td>
+<td>Gradient clipping norm C</td>
+<td>1.0</td>
+<td>Standard DP-SGD starting point</td>
 </tr>
 <tr>
-<td><code>--rawt1folder</code></td>
-<td>Path</td>
-<td>Source directory for <code>T1_orig.nii.gz</code></td>
+<td>IDP clamping</td>
+<td>Biological range per IDP (see table above)</td>
+<td>Bounds sensitivity</td>
 </tr>
 <tr>
-<td><code>--rawt2folder</code></td>
-<td>Path</td>
-<td>Source directory for <code>T2_orig.nii.gz</code> (only when <code>--t2=yes</code>)</td>
+<td>Min cohort size before releasing stats</td>
+<td>n ≥ 50</td>
+<td>Reduces sensitivity and noise requirement</td>
 </tr>
 <tr>
-<td><code>--logt1folder</code></td>
-<td>Path</td>
-<td>Log file path</td>
+<td>Privacy accounting framework</td>
+<td>Rényi DP (autodp / opacus)</td>
+<td>Tight composition across rounds</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="outputs">Outputs<a class="headerlink" href="#outputs" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Output</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>&lt;processedT1Folder&gt;/FreeSurfer/</code></td>
-<td>Full FreeSurfer subject directory (<code>surf/</code>, <code>mri/</code>, <code>label/</code>, <code>stats/</code> sub-directories)</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="commands-executed">Commands Executed<a class="headerlink" href="#commands-executed" title="Permanent link">&para;</a></h2>
-<p><strong>T1 only:</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>recon-all<span class="w"> </span>-i<span class="w"> </span>T1_orig.nii.gz<span class="w"> </span>-s<span class="w"> </span>FreeSurfer<span class="w"> </span>-all
-</code></pre></div></p>
-<p><strong>T1 + T2-FLAIR:</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>recon-all<span class="w"> </span>-i<span class="w"> </span>T1_orig.nii.gz<span class="w"> </span>-s<span class="w"> </span>FreeSurfer<span class="w"> </span>-FLAIR<span class="w"> </span>T2_orig.nii.gz<span class="w"> </span>-all
-</code></pre></div></p>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Dwork, C. &amp; Roth, A. (2014). The algorithmic foundations of differential privacy. <em>Foundations and Trends in TCS</em>, 9(3–4), 211–407.</li>
+<li>Abadi, M. et al. (2016). Deep learning with differential privacy. <em>ACM CCS 2016</em>.</li>
+<li>Mironov, I. (2017). Rényi differential privacy. <em>CSF 2017</em>.</li>
+<li>Kairouz, P. et al. (2015). The composition theorem for differential privacy. <em>ICML 2015</em>.</li>
+<li>Kaissis, G. et al. (2021). End-to-end privacy preserving deep learning on multi-institutional medical imaging. <em>Nature Machine Intelligence</em>, 3, 473–484.</li>
+<li>Domingo-Ferrer, J. et al. (2021). Privacy-preserving methods for neuroimaging data analysis. <em>NeuroImage</em>.</li>
+<li>McMahan, H.B. et al. (2018). A general approach to adding differential privacy to iterative training procedures. <em>arXiv:1812.06210</em>.</li>
+</ul>
 
 
 
@@ -2163,7 +2537,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../struc-preproc-part1/" class="md-footer__link md-footer__link--prev" aria-label="Previous: struc_preproc_part_1.sh — Stage 1 Dispatcher">
+          <a href="../membership-attacks/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Membership Inference Attacks">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2173,20 +2547,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                struc_preproc_part_1.sh — Stage 1 Dispatcher
+                Membership Inference Attacks
               </div>
             </div>
           </a>
         
         
           
-          <a href="../struc-preproc-part3/" class="md-footer__link md-footer__link--next" aria-label="Next: struc_preproc_part_3.sh — FastSurfer + Output Organisation">
+          <a href="../secure-aggregation/" class="md-footer__link md-footer__link--next" aria-label="Next: Secure Aggregation &amp; MPC">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                struc_preproc_part_3.sh — FastSurfer + Output Organisation
+                Secure Aggregation & MPC
               </div>
             </div>
             <div class="md-footer__button md-icon">
