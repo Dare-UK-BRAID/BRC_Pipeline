@@ -65,54 +65,55 @@ markdown_extensions:
 nav:
   - Home: index.md
 
-  - Structural Pipeline: pipeline/overview.md
+  - Data Preprocessing:
+    - Structural Pipeline: pipeline/overview.md
 
-  - Structural Reference:
-    - Directory Structure: pipeline/directory-structure.md
-    - Dependencies: pipeline/dependencies.md
-    - Script Reference:
-      - scripts/index.md
-      - Entry Point:
-        - scripts/struc-preproc.md
-        - scripts/struc-preproc-part1.md
-        - scripts/struc-preproc-part2.md
-        - scripts/struc-preproc-part3.md
-      - Core Processing:
-        - scripts/t1-preprocessing.md
-        - scripts/t2-preprocessing.md
-      - Analysis Tools:
-        - scripts/t1-sienax.md
-        - scripts/t2-bianca.md
-      - Organisation:
-        - scripts/output-organization.md
-        - scripts/fsl-anat.md
-        - scripts/run-preprocessing.md
-        - scripts/move-rename.md
-    - Appendix:
-      - appendix/call-graph.md
-      - appendix/environment-variables.md
-      - appendix/output-files.md
+    - Structural Reference:
+      - Directory Structure: pipeline/directory-structure.md
+      - Dependencies: pipeline/dependencies.md
+      - Script Reference:
+        - scripts/index.md
+        - Entry Point:
+          - scripts/struc-preproc.md
+          - scripts/struc-preproc-part1.md
+          - scripts/struc-preproc-part2.md
+          - scripts/struc-preproc-part3.md
+        - Core Processing:
+          - scripts/t1-preprocessing.md
+          - scripts/t2-preprocessing.md
+        - Analysis Tools:
+          - scripts/t1-sienax.md
+          - scripts/t2-bianca.md
+        - Organisation:
+          - scripts/output-organization.md
+          - scripts/fsl-anat.md
+          - scripts/run-preprocessing.md
+          - scripts/move-rename.md
+      - Appendix:
+        - appendix/call-graph.md
+        - appendix/environment-variables.md
+        - appendix/output-files.md
 
-  - Diffusion Pipeline:
-    - diffusion/index.md
+    - Diffusion Pipeline:
+      - diffusion/index.md
 
-  - Functional Pipeline:
-    - functional/index.md
+    - Functional Pipeline:
+      - functional/index.md
 
-  - Functional Group Analysis:
-    - func-group/index.md
+    - Functional Group Analysis:
+      - func-group/index.md
 
-  - Perfusion (ASL) Pipeline:
-    - perfusion/index.md
+    - Perfusion (ASL) Pipeline:
+      - perfusion/index.md
 
-  - IDP Extraction:
-    - idp/index.md
+    - IDP Extraction:
+      - idp/index.md
 
-  - Federated NeuroImaging Preprocessing Pipelines Requirements:
-    - federated/index.md
-    - Egress & Privacy Risk Analysis: federated/egress.md
-    - Membership Inference Attacks: federated/membership-attacks.md
-    - Differential Privacy: federated/differential-privacy.md
-    - Secure Aggregation & MPC: federated/secure-aggregation.md
-    - Disclosure Thresholds: federated/thresholds.md
-    - Governance & Compliance: federated/compliance.md
+    - Federated NeuroImaging Preprocessing Pipelines Requirements:
+      - federated/index.md
+      - Egress & Privacy Risk Analysis: federated/egress.md
+      - Membership Inference Attacks: federated/membership-attacks.md
+      - Differential Privacy: federated/differential-privacy.md
+      - Secure Aggregation & MPC: federated/secure-aggregation.md
+      - Disclosure Thresholds: federated/thresholds.md
+      - Governance & Compliance: federated/compliance.md
