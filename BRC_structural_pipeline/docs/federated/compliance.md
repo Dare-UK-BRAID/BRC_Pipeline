@@ -171,4 +171,4 @@ The federated orchestration layer should enforce minimum cohort sizes at the sit
 - Health Data Research UK. *Five Safes Framework*. [https://ukdataservice.ac.uk/help/secure-lab/what-is-the-five-safes-framework/](https://ukdataservice.ac.uk/help/secure-lab/what-is-the-five-safes-framework/)
 - SACRO: Statistical Controlled Automated Release Output. UK TRE Community, 2023. [https://github.com/AI-SDC/SACRO-ML](https://github.com/AI-SDC/SACRO-ML)
 - Rieke, N. et al. (2020). The future of digital health with federated learning. *npj Digital Medicine*, 3, 119. [https://doi.org/10.1038/s41746-020-00323-1](https://doi.org/10.1038/s41746-020-00323-1)
-- Kaissis, G. et al. (2021). End-to-end privacy preserving deep learning on multi-institutional medical imaging. *Nature Machine Intelligence*, 3, 473–484. [https://doi.org/10.1038/s42256-021-00337-8](https://doi.org/10.1038/s42256-021-00337-8)
+- Kaissis, G. et al. (2021). End-to-end privacy preserving deep learning on multi-institutional medical imaging. *Nature Machine Intelligence*, 3, 473–484. [https://www.nature.com/articles/s42256-021-00337-8](https://www.nature.com/articles/s42256-021-00337-8)

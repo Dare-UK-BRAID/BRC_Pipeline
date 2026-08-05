@@ -76,6 +76,6 @@ The DPUK Data Access Process includes an **AI Triage** stage specifically to ass
 - DPUK Data Provider Handbook (2024). Dementias Platform UK, Swansea University. [https://portal.dementiasplatform.uk](https://portal.dementiasplatform.uk)
 - UK Five Safes Framework. Health Data Research UK (HDRUK). [https://ukdataservice.ac.uk/help/secure-lab/what-is-the-five-safes-framework/](https://ukdataservice.ac.uk/help/secure-lab/what-is-the-five-safes-framework/)
 - McMahan, B. et al. (2017). Communication-efficient learning of deep networks from decentralized data. *AISTATS 2017*. [https://arxiv.org/abs/1602.05629](https://arxiv.org/abs/1602.05629)
-- Kaissis, G. et al. (2021). End-to-end privacy preserving deep learning on multi-institutional medical imaging. *Nature Machine Intelligence*, 3, 473–484. [https://doi.org/10.1038/s42256-021-00337-8](https://doi.org/10.1038/s42256-021-00337-8)
+- Kaissis, G. et al. (2021). End-to-end privacy preserving deep learning on multi-institutional medical imaging. *Nature Machine Intelligence*, 3, 473–484. [https://www.nature.com/articles/s42256-021-00337-8](https://www.nature.com/articles/s42256-021-00337-8)
 - Melis, L. et al. (2019). Exploiting unintended feature leakage in collaborative learning. *IEEE S&P 2019*. [https://doi.org/10.1109/SP.2019.00029](https://doi.org/10.1109/SP.2019.00029)
 - Dwork, C. & Roth, A. (2014). The algorithmic foundations of differential privacy. *Foundations and Trends in TCS*, 9(3–4), 211–407. [https://doi.org/10.1561/0400000042](https://doi.org/10.1561/0400000042)
