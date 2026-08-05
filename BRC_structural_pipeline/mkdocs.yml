@@ -43,6 +43,9 @@ theme:
 extra_css:
   - stylesheets/braid.css
 
+extra_javascript:
+  - javascripts/external_links.js
+
 plugins:
   - search
 
