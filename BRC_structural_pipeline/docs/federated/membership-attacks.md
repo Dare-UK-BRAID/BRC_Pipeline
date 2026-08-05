@@ -107,4 +107,4 @@ Before deploying a federated IDP analysis, the following empirical evaluation is
 - Demšar, U. et al. (2021). Functional connectivity fingerprinting across multiple sites. *NeuroImage*.
 - Bonawitz, K. et al. (2017). Practical secure aggregation for privacy-preserving machine learning. *ACM CCS 2017*. [https://doi.org/10.1145/3133956.3133982](https://doi.org/10.1145/3133956.3133982)
 - Kaissis, G. et al. (2021). End-to-end privacy preserving deep learning on multi-institutional medical imaging. *Nature Machine Intelligence*, 3, 473–484. [https://doi.org/10.1038/s42256-021-00337-6](https://doi.org/10.1038/s42256-021-00337-6)
-- Melis, L. et al. (2019). Exploiting unintended feature leakage in collaborative learning. *IEEE S&P 2019*. [https://doi.org/10.1109/SP.2019.00009](https://doi.org/10.1109/SP.2019.00009)
+- Melis, L. et al. (2019). Exploiting unintended feature leakage in collaborative learning. *IEEE S&P 2019*. [https://doi.org/10.1109/SP.2019.00029](https://doi.org/10.1109/SP.2019.00029)
