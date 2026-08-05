@@ -157,10 +157,10 @@ Before any BRAID-derived statistic is transmitted to a federated aggregator or r
 
 ## References
 
-- UK Office for National Statistics (2023). *Disclosure Control for Administrative Data*. ONS Methodology. [https://www.ons.gov.uk/methodology/methodologytopicsandstatisticalconcepts/disclosurecontrol](https://www.ons.gov.uk/methodology/methodologytopicsandstatisticalconcepts/disclosurecontrol)
-- Hundepool, A. et al. (2012). *Statistical Disclosure Control*. Wiley. [https://doi.org/10.1002/9781118348239](https://doi.org/10.1002/9781118348239)
-- DPUK Data Provider Handbook (2024). Dementias Platform UK. [https://portal.dementiasplatform.uk](https://portal.dementiasplatform.uk)
-- NHS Digital (2023). *Data Security and Protection Toolkit*. [https://www.dsptoolkit.nhs.uk/](https://www.dsptoolkit.nhs.uk/)
-- SACRO: Statistical Controlled Automated Release Output. UK TRE Community, 2023. [https://github.com/AI-SDC/SACRO-ML](https://github.com/AI-SDC/SACRO-ML)
+- UK Office for National Statistics (2023). *Disclosure Control for Administrative Data*. ONS Methodology. [https://www.ons.gov.uk/methodology/methodologytopicsandstatisticalconcepts/disclosurecontrol](https://www.ons.gov.uk/methodology/methodologytopicsandstatisticalconcepts/disclosurecontrol){target="_blank"}
+- Hundepool, A. et al. (2012). *Statistical Disclosure Control*. Wiley. [https://doi.org/10.1002/9781118348239](https://doi.org/10.1002/9781118348239){target="_blank"}
+- DPUK Data Provider Handbook (2024). Dementias Platform UK. [https://portal.dementiasplatform.uk](https://portal.dementiasplatform.uk){target="_blank"}
+- NHS Digital (2023). *Data Security and Protection Toolkit*. [https://www.dsptoolkit.nhs.uk/](https://www.dsptoolkit.nhs.uk/){target="_blank"}
+- SACRO: Statistical Controlled Automated Release Output. UK TRE Community, 2023. [https://github.com/AI-SDC/SACRO-ML](https://github.com/AI-SDC/SACRO-ML){target="_blank"}
 - Domingo-Ferrer, J. & Torra, V. (2001). A quantitative comparison of disclosure control methods for microdata. *Confidentiality, Disclosure, and Data Access*.
-- Wachinger, C. et al. (2015). BrainPrint. *NeuroImage*, 109, 232–248. [https://doi.org/10.1016/j.neuroimage.2015.01.032](https://doi.org/10.1016/j.neuroimage.2015.01.032)
+- Wachinger, C. et al. (2015). BrainPrint. *NeuroImage*, 109, 232–248. [https://doi.org/10.1016/j.neuroimage.2015.01.032](https://doi.org/10.1016/j.neuroimage.2015.01.032){target="_blank"}
