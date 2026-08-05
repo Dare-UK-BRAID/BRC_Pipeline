@@ -163,4 +163,4 @@ Before any BRAID-derived statistic is transmitted to a federated aggregator or r
 - NHS Digital (2023). *Data Security and Protection Toolkit*. [https://www.dsptoolkit.nhs.uk/](https://www.dsptoolkit.nhs.uk/)
 - SACRO: Statistical Controlled Automated Release Output. UK TRE Community, 2023. [https://github.com/AI-SDC/SACRO-ML](https://github.com/AI-SDC/SACRO-ML)
 - Domingo-Ferrer, J. & Torra, V. (2001). A quantitative comparison of disclosure control methods for microdata. *Confidentiality, Disclosure, and Data Access*.
-- Wachinger, C. et al. (2015). BrainPrint. *NeuroImage*, 109, 232–248. [https://doi.org/10.1016/j.neuroimage.2015.01.007](https://doi.org/10.1016/j.neuroimage.2015.01.007)
+- Wachinger, C. et al. (2015). BrainPrint. *NeuroImage*, 109, 232–248. [https://doi.org/10.1016/j.neuroimage.2015.01.032](https://doi.org/10.1016/j.neuroimage.2015.01.032)

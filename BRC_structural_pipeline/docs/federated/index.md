@@ -72,7 +72,7 @@ The DPUK Data Access Process includes an **AI Triage** stage specifically to ass
 ## References
 
 - Finn, E.S. et al. (2015). Functional connectome fingerprinting: identifying individuals using patterns of brain connectivity. *Nature Neuroscience*, 18(11), 1664–1671. [https://doi.org/10.1038/nn.4135](https://doi.org/10.1038/nn.4135)
-- Wachinger, C. et al. (2015). BrainPrint: A discriminative characterization of brain morphology. *NeuroImage*, 109, 232–248. [https://doi.org/10.1016/j.neuroimage.2015.01.007](https://doi.org/10.1016/j.neuroimage.2015.01.007)
+- Wachinger, C. et al. (2015). BrainPrint: A discriminative characterization of brain morphology. *NeuroImage*, 109, 232–248. [https://doi.org/10.1016/j.neuroimage.2015.01.032](https://doi.org/10.1016/j.neuroimage.2015.01.032)
 - DPUK Data Provider Handbook (2024). Dementias Platform UK, Swansea University. [https://portal.dementiasplatform.uk](https://portal.dementiasplatform.uk)
 - UK Five Safes Framework. Health Data Research UK (HDRUK). [https://www.hdruk.ac.uk/access-to-health-data/five-safes/](https://www.hdruk.ac.uk/access-to-health-data/five-safes/)
 - McMahan, B. et al. (2017). Communication-efficient learning of deep networks from decentralized data. *AISTATS 2017*. [https://arxiv.org/abs/1602.05629](https://arxiv.org/abs/1602.05629)

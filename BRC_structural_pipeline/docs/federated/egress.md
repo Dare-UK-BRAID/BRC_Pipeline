@@ -281,7 +281,7 @@ Instead of a cohort-derived mean, the BRC pipeline uses the **fixed MNI `FMRIB58
 
 ## References
 
-- Wachinger, C. et al. (2015). BrainPrint: A discriminative characterization of brain morphology. *NeuroImage*, 109, 232–248. [https://doi.org/10.1016/j.neuroimage.2015.01.007](https://doi.org/10.1016/j.neuroimage.2015.01.007)
+- Wachinger, C. et al. (2015). BrainPrint: A discriminative characterization of brain morphology. *NeuroImage*, 109, 232–248. [https://doi.org/10.1016/j.neuroimage.2015.01.032](https://doi.org/10.1016/j.neuroimage.2015.01.032)
 - Finn, E.S. et al. (2015). Functional connectome fingerprinting: identifying individuals using patterns of brain connectivity. *Nature Neuroscience*, 18(11), 1664–1671. [https://doi.org/10.1038/nn.4135](https://doi.org/10.1038/nn.4135)
 - Mansour, L. et al. (2021). Connectome-based fingerprinting: reproducibility across sites and cohorts. *NeuroImage*, 232, 117852. [https://doi.org/10.1016/j.neuroimage.2021.117852](https://doi.org/10.1016/j.neuroimage.2021.117852)
 - Melis, L. et al. (2019). Exploiting unintended feature leakage in collaborative learning. *IEEE Symposium on Security and Privacy*. [https://doi.org/10.1109/SP.2019.00009](https://doi.org/10.1109/SP.2019.00009)
