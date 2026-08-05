@@ -163,12 +163,12 @@ The federated orchestration layer should enforce minimum cohort sizes at the sit
 
 ## References
 
-- DPUK Data Provider Handbook (2024). Dementias Platform UK.
-- UK GDPR / Data Protection Act 2018. ICO guidance: ico.org.uk.
-- NHS Digital (2023). *Data Security and Protection Toolkit*.
-- UK Digital Economy Act 2017, Accredited researcher status and data sharing.
-- ISO/IEC 27001:2022, Information security management systems.
-- Health Data Research UK. *Five Safes Framework*.
-- SACRO: Statistical Controlled Automated Release Output. UK TRE Community, 2023.
-- Rieke, N. et al. (2020). The future of digital health with federated learning. *npj Digital Medicine*, 3, 119.
-- Kaissis, G. et al. (2021). End-to-end privacy preserving deep learning on multi-institutional medical imaging. *Nature Machine Intelligence*, 3, 473–484.
+- DPUK Data Provider Handbook (2024). Dementias Platform UK. [https://portal.dementiasplatform.uk](https://portal.dementiasplatform.uk)
+- UK GDPR / Data Protection Act 2018. ICO guidance. [https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/](https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/)
+- NHS Digital (2023). *Data Security and Protection Toolkit*. [https://www.dsptoolkit.nhs.uk/](https://www.dsptoolkit.nhs.uk/)
+- UK Digital Economy Act 2017, Accredited researcher status and data sharing. [https://www.legislation.gov.uk/ukpga/2017/30/contents/enacted](https://www.legislation.gov.uk/ukpga/2017/30/contents/enacted)
+- ISO/IEC 27001:2022, Information security management systems. [https://www.iso.org/standard/82875.html](https://www.iso.org/standard/82875.html)
+- Health Data Research UK. *Five Safes Framework*. [https://www.hdruk.ac.uk/access-to-health-data/five-safes/](https://www.hdruk.ac.uk/access-to-health-data/five-safes/)
+- SACRO: Statistical Controlled Automated Release Output. UK TRE Community, 2023. [https://github.com/AI-SDC/SACRO-ML](https://github.com/AI-SDC/SACRO-ML)
+- Rieke, N. et al. (2020). The future of digital health with federated learning. *npj Digital Medicine*, 3, 119. [https://doi.org/10.1038/s41746-020-00323-1](https://doi.org/10.1038/s41746-020-00323-1)
+- Kaissis, G. et al. (2021). End-to-end privacy preserving deep learning on multi-institutional medical imaging. *Nature Machine Intelligence*, 3, 473–484. [https://doi.org/10.1038/s42256-021-00337-6](https://doi.org/10.1038/s42256-021-00337-6)

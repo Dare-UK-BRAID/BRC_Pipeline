@@ -108,7 +108,7 @@ nav:
   - IDP Extraction:
     - idp/index.md
 
-  - Federated NeuroImaging Requirements:
+  - Federated NeuroImaging Preprocessing Pipelines Requirements:
     - federated/index.md
     - Egress & Privacy Risk Analysis: federated/egress.md
     - Membership Inference Attacks: federated/membership-attacks.md

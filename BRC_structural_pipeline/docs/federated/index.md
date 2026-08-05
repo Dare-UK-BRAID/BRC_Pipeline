@@ -1,4 +1,4 @@
-# Federated NeuroImaging Requirements
+# Federated NeuroImaging Preprocessing Pipelines Requirements
 
 The BRAID pipelines are designed to operate within Trusted Research Environments (TREs), isolated compute enclaves where raw neuroimaging data never leaves the site. When these pipelines are deployed across multiple TREs under a **federated analytics** or **federated learning (FL)** model, a new class of privacy risk emerges: information encoded in the **outputs** of the pipeline (imaging-derived phenotypes, model parameters, gradients, or summary statistics) may be transmitted to a central aggregator, and that transmission can leak private participant information even when raw images remain local.
 
@@ -71,11 +71,11 @@ The DPUK Data Access Process includes an **AI Triage** stage specifically to ass
 
 ## References
 
-- Finn, E.S. et al. (2015). Functional connectome fingerprinting: identifying individuals using patterns of brain connectivity. *Nature Neuroscience*, 18(11), 1664–1671.
-- Wachinger, C. et al. (2015). BrainPrint: A discriminative characterization of brain morphology. *NeuroImage*, 109, 232–248.
-- DPUK Data Provider Handbook (2024). Dementias Platform UK, Swansea University.
-- UK Five Safes Framework. Health Data Research UK (HDRUK).
-- McMahan, B. et al. (2017). Communication-efficient learning of deep networks from decentralized data. *AISTATS 2017*.
-- Kaissis, G. et al. (2021). End-to-end privacy preserving deep learning on multi-institutional medical imaging. *Nature Machine Intelligence*, 3, 473–484.
-- Melis, L. et al. (2019). Exploiting unintended feature leakage in collaborative learning. *IEEE S&P 2019*.
-- Dwork, C. & Roth, A. (2014). The algorithmic foundations of differential privacy. *Foundations and Trends in TCS*, 9(3–4), 211–407.
+- Finn, E.S. et al. (2015). Functional connectome fingerprinting: identifying individuals using patterns of brain connectivity. *Nature Neuroscience*, 18(11), 1664–1671. [https://doi.org/10.1038/nn.4135](https://doi.org/10.1038/nn.4135)
+- Wachinger, C. et al. (2015). BrainPrint: A discriminative characterization of brain morphology. *NeuroImage*, 109, 232–248. [https://doi.org/10.1016/j.neuroimage.2015.01.007](https://doi.org/10.1016/j.neuroimage.2015.01.007)
+- DPUK Data Provider Handbook (2024). Dementias Platform UK, Swansea University. [https://portal.dementiasplatform.uk](https://portal.dementiasplatform.uk)
+- UK Five Safes Framework. Health Data Research UK (HDRUK). [https://www.hdruk.ac.uk/access-to-health-data/five-safes/](https://www.hdruk.ac.uk/access-to-health-data/five-safes/)
+- McMahan, B. et al. (2017). Communication-efficient learning of deep networks from decentralized data. *AISTATS 2017*. [https://arxiv.org/abs/1602.05629](https://arxiv.org/abs/1602.05629)
+- Kaissis, G. et al. (2021). End-to-end privacy preserving deep learning on multi-institutional medical imaging. *Nature Machine Intelligence*, 3, 473–484. [https://doi.org/10.1038/s42256-021-00337-6](https://doi.org/10.1038/s42256-021-00337-6)
+- Melis, L. et al. (2019). Exploiting unintended feature leakage in collaborative learning. *IEEE S&P 2019*. [https://doi.org/10.1109/SP.2019.00009](https://doi.org/10.1109/SP.2019.00009)
+- Dwork, C. & Roth, A. (2014). The algorithmic foundations of differential privacy. *Foundations and Trends in TCS*, 9(3–4), 211–407. [https://doi.org/10.1561/0400000042](https://doi.org/10.1561/0400000042)
