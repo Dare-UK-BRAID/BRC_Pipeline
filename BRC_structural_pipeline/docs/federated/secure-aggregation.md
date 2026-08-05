@@ -136,6 +136,6 @@ Under the DPUK/SeRP infrastructure, inter-site communication must comply with IS
 - Bonawitz, K. et al. (2017). Practical secure aggregation for privacy-preserving machine learning. *ACM CCS 2017*. [https://doi.org/10.1145/3133956.3133982](https://doi.org/10.1145/3133956.3133982)
 - Paillier, P. (1999). Public-key cryptosystems based on composite degree residuosity classes. *EUROCRYPT 1999*. [https://doi.org/10.1007/3-540-48910-X_16](https://doi.org/10.1007/3-540-48910-X_16)
 - Zhu, L. et al. (2019). Deep leakage from gradients. *NeurIPS 2019*. [https://arxiv.org/abs/1906.08935](https://arxiv.org/abs/1906.08935)
-- Kaissis, G. et al. (2021). End-to-end privacy preserving deep learning on multi-institutional medical imaging. *Nature Machine Intelligence*, 3, 473–484. [https://doi.org/10.1038/s42256-021-00337-6](https://doi.org/10.1038/s42256-021-00337-6)
+- Kaissis, G. et al. (2021). End-to-end privacy preserving deep learning on multi-institutional medical imaging. *Nature Machine Intelligence*, 3, 473–484. [https://doi.org/10.1038/s42256-021-00337-8](https://doi.org/10.1038/s42256-021-00337-8)
 - Rieke, N. et al. (2020). The future of digital health with federated learning. *npj Digital Medicine*, 3, 119. [https://doi.org/10.1038/s41746-020-00323-1](https://doi.org/10.1038/s41746-020-00323-1)
 - SACRO: Statistical Controlled Automated Release Output. UK TRE Community, 2023. [https://github.com/AI-SDC/SACRO-ML](https://github.com/AI-SDC/SACRO-ML)

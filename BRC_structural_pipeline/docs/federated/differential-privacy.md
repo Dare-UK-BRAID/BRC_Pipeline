@@ -164,6 +164,6 @@ DP provides formal guarantees, but several practical challenges arise in neuroim
 - Abadi, M. et al. (2016). Deep learning with differential privacy. *ACM CCS 2016*. [https://doi.org/10.1145/2976749.2978318](https://doi.org/10.1145/2976749.2978318)
 - Mironov, I. (2017). Rényi differential privacy. *CSF 2017*. [https://doi.org/10.1109/CSF.2017.11](https://doi.org/10.1109/CSF.2017.11)
 - Kairouz, P. et al. (2015). The composition theorem for differential privacy. *ICML 2015*. [https://proceedings.mlr.press/v37/kairouz15.html](https://proceedings.mlr.press/v37/kairouz15.html)
-- Kaissis, G. et al. (2021). End-to-end privacy preserving deep learning on multi-institutional medical imaging. *Nature Machine Intelligence*, 3, 473–484. [https://doi.org/10.1038/s42256-021-00337-6](https://doi.org/10.1038/s42256-021-00337-6)
+- Kaissis, G. et al. (2021). End-to-end privacy preserving deep learning on multi-institutional medical imaging. *Nature Machine Intelligence*, 3, 473–484. [https://doi.org/10.1038/s42256-021-00337-8](https://doi.org/10.1038/s42256-021-00337-8)
 - Domingo-Ferrer, J. et al. (2021). Privacy-preserving methods for neuroimaging data analysis. *NeuroImage*.
 - McMahan, H.B. et al. (2018). A general approach to adding differential privacy to iterative training procedures. *arXiv:1812.06210*. [https://arxiv.org/abs/1812.06210](https://arxiv.org/abs/1812.06210)
